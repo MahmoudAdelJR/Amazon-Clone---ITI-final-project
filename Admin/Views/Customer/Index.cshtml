@@ -30,10 +30,19 @@
                     @Html.ActionLink("Delete", "Delete", new { @Id = item.Id })
                 </i>
             </td>
-             <td>
-                    @Html.ActionLink("Edit", "Edit", new { @Id = item.Id, @Name = item.Name,
-                    @Email = item.Email, @PhoneNumber = item.PhoneNumber, @Gender = item.Gender, @City = item.City,
-                    @PostalCode = item.PostalCode, @Street = item.Street})
+            <td>
+                @Html.ActionLink("Edit", "Edit", new
+                {
+                    @Id = item.Id,
+                    @Name = item.Name,
+                @Email = item.Email,
+                    @PhoneNumber = item.PhoneNumber,
+                    @Gender = item.Gender,
+                    @City = item.City,
+                @PostalCode = item.PostalCode,
+                    @Street = item.Street,
+                    @profileID = item.profileID
+                })
 
             </td>
             <td>

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\final project\\MVC-Core-Project-master\\Repos\\Repos.csproj": {}
+    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj": {}
   },
   "projects": {
-    "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj": {
+    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj",
+        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj",
         "projectName": "DataContext",
-        "projectPath": "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "F:\\final project\\MVC-Core-Project-master\\DataContext\\obj\\",
+        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj",
+        "packagesPath": "C:\\Users\\LeNoVo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LeNoVo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj": {
-                "projectPath": "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj"
+              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj"
               }
             }
           }
@@ -88,21 +88,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj": {
+    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "F:\\final project\\MVC-Core-Project-master\\Models\\obj\\",
+        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\LeNoVo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LeNoVo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -152,21 +152,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\final project\\MVC-Core-Project-master\\Repos\\Repos.csproj": {
+    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\final project\\MVC-Core-Project-master\\Repos\\Repos.csproj",
+        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj",
         "projectName": "Repos",
-        "projectPath": "F:\\final project\\MVC-Core-Project-master\\Repos\\Repos.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "F:\\final project\\MVC-Core-Project-master\\Repos\\obj\\",
+        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj",
+        "packagesPath": "C:\\Users\\LeNoVo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LeNoVo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -180,8 +180,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj": {
-                "projectPath": "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj"
+              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj": {
+                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj"
               }
             }
           }
@@ -220,7 +220,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }

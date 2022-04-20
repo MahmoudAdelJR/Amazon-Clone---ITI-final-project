@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4WMFEItBimlblmXLsjwYC+6A9XquDeHCgknFiDvQ+Qim9s7PE3ftcmdiyiOA9zoX/ck89U3LHvmq+dqGIwlNOA==",
+  "dgSpecHash": "UOpmngbxa40iGtyRtFW+Dy9u0g+l0qPkAovlH5qY2YBZqMK9lvtHuIkmjVMCB6rdXvq+EDaiqtql+FeAwKUNGg==",
   "success": true,
-  "projectFilePath": "F:\\final project\\MVC-Core-Project-master\\UserSide\\UserSide.csproj",
+  "projectFilePath": "F:\\final project\\Amazon Clone - ITI final project\\UserSide\\UserSide.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

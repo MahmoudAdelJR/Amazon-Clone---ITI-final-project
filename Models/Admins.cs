@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Microsoft.AspNetCore.Identity;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,7 +16,10 @@ namespace Admin.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        [ForeignKey("adminProfile")]
+        public string profileID { get; set; }
 
         public virtual ICollection<Contact> Contacts { get; set; }
+        public virtual IdentityUser adminProfile { get; set; }
     }
 }

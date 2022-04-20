@@ -68,6 +68,8 @@ namespace Admin.Data
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
+                entity.HasOne(d => d.adminProfile);
+
                 entity.Property(e => e.Password)
                     .IsRequired()
                     .HasMaxLength(100)
@@ -214,6 +216,7 @@ namespace Admin.Data
                 entity.Property(e => e.Street)
                     .HasMaxLength(50)
                     .IsUnicode(false);
+
                 entity.HasOne(d => d.profile);
                 
 

@@ -64,6 +64,12 @@ namespace UserSide.Controllers
             }
             else
             {
+                if (!await roleManager.RoleExistsAsync(UserRoles.Customer))
+                    await roleManager.CreateAsync(new IdentityRole(UserRoles.Customer));
+                if (await roleManager.RoleExistsAsync(UserRoles.Customer))
+                {
+                    await userManager.AddToRoleAsync(user, UserRoles.Customer);
+                }
                 try
                 {
                     ModelRepository.Create(new Customer()
@@ -152,8 +158,8 @@ namespace UserSide.Controllers
             if (!await roleManager.RoleExistsAsync(UserRoles.Admin))
                 await roleManager.CreateAsync(new IdentityRole(UserRoles.Admin));
 
-            if (!await roleManager.RoleExistsAsync(UserRoles.User))
-                await roleManager.CreateAsync(new IdentityRole(UserRoles.User));
+            if (!await roleManager.RoleExistsAsync(UserRoles.Customer))
+                await roleManager.CreateAsync(new IdentityRole(UserRoles.Customer));
 
             if (await roleManager.RoleExistsAsync(UserRoles.Admin))
             {

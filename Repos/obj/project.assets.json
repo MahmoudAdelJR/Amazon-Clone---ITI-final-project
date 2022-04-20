@@ -8855,11 +8855,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\final project\\MVC-Core-Project-master\\Repos\\Repos.csproj",
+      "projectUniqueName": "F:\\final project\\Amazon Clone - ITI final project\\Repos\\Repos.csproj",
       "projectName": "Repos",
-      "projectPath": "F:\\final project\\MVC-Core-Project-master\\Repos\\Repos.csproj",
+      "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Repos\\Repos.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "F:\\final project\\MVC-Core-Project-master\\Repos\\obj\\",
+      "outputPath": "F:\\final project\\Amazon Clone - ITI final project\\Repos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8876,8 +8876,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj": {
-              "projectPath": "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj"
+            "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj": {
+              "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj"
             }
           }
         }

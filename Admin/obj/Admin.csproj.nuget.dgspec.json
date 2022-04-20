@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\final project\\MVC-Core-Project-master\\Admin\\Admin.csproj": {}
+    "F:\\final project\\Amazon Clone - ITI final project\\Admin\\Admin.csproj": {}
   },
   "projects": {
-    "F:\\final project\\MVC-Core-Project-master\\Admin\\Admin.csproj": {
+    "F:\\final project\\Amazon Clone - ITI final project\\Admin\\Admin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\final project\\MVC-Core-Project-master\\Admin\\Admin.csproj",
+        "projectUniqueName": "F:\\final project\\Amazon Clone - ITI final project\\Admin\\Admin.csproj",
         "projectName": "Admin",
-        "projectPath": "F:\\final project\\MVC-Core-Project-master\\Admin\\Admin.csproj",
+        "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Admin\\Admin.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "F:\\final project\\MVC-Core-Project-master\\Admin\\obj\\",
+        "outputPath": "F:\\final project\\Amazon Clone - ITI final project\\Admin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,14 +28,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj": {
-                "projectPath": "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj"
+              "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj": {
+                "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj"
               },
-              "F:\\final project\\MVC-Core-Project-master\\Repos\\Repos.csproj": {
-                "projectPath": "F:\\final project\\MVC-Core-Project-master\\Repos\\Repos.csproj"
+              "F:\\final project\\Amazon Clone - ITI final project\\Repos\\Repos.csproj": {
+                "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Repos\\Repos.csproj"
               },
-              "F:\\final project\\MVC-Core-Project-master\\ViewModel\\ViewModel.csproj": {
-                "projectPath": "F:\\final project\\MVC-Core-Project-master\\ViewModel\\ViewModel.csproj"
+              "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\ViewModel.csproj": {
+                "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\ViewModel.csproj"
               }
             }
           }
@@ -101,14 +101,14 @@
         }
       }
     },
-    "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj": {
+    "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj",
+        "projectUniqueName": "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj",
         "projectName": "DataContext",
-        "projectPath": "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj",
+        "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "F:\\final project\\MVC-Core-Project-master\\DataContext\\obj\\",
+        "outputPath": "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -125,8 +125,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj": {
-                "projectPath": "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj"
+              "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj": {
+                "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj"
               }
             }
           }
@@ -189,14 +189,14 @@
         }
       }
     },
-    "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj": {
+    "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj",
+        "projectUniqueName": "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj",
+        "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "F:\\final project\\MVC-Core-Project-master\\Models\\obj\\",
+        "outputPath": "F:\\final project\\Amazon Clone - ITI final project\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -253,14 +253,14 @@
         }
       }
     },
-    "F:\\final project\\MVC-Core-Project-master\\Repos\\Repos.csproj": {
+    "F:\\final project\\Amazon Clone - ITI final project\\Repos\\Repos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\final project\\MVC-Core-Project-master\\Repos\\Repos.csproj",
+        "projectUniqueName": "F:\\final project\\Amazon Clone - ITI final project\\Repos\\Repos.csproj",
         "projectName": "Repos",
-        "projectPath": "F:\\final project\\MVC-Core-Project-master\\Repos\\Repos.csproj",
+        "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Repos\\Repos.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "F:\\final project\\MVC-Core-Project-master\\Repos\\obj\\",
+        "outputPath": "F:\\final project\\Amazon Clone - ITI final project\\Repos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -277,8 +277,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj": {
-                "projectPath": "F:\\final project\\MVC-Core-Project-master\\DataContext\\DataContext.csproj"
+              "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj": {
+                "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj"
               }
             }
           }
@@ -321,14 +321,14 @@
         }
       }
     },
-    "F:\\final project\\MVC-Core-Project-master\\ViewModel\\ViewModel.csproj": {
+    "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\ViewModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\final project\\MVC-Core-Project-master\\ViewModel\\ViewModel.csproj",
+        "projectUniqueName": "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\ViewModel.csproj",
         "projectName": "ViewModel",
-        "projectPath": "F:\\final project\\MVC-Core-Project-master\\ViewModel\\ViewModel.csproj",
+        "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\ViewModel.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "F:\\final project\\MVC-Core-Project-master\\ViewModel\\obj\\",
+        "outputPath": "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -345,8 +345,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj": {
-                "projectPath": "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj"
+              "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj": {
+                "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj"
               }
             }
           }

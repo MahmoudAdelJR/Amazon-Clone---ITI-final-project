@@ -766,11 +766,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\final project\\MVC-Core-Project-master\\ViewModel\\ViewModel.csproj",
+      "projectUniqueName": "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\ViewModel.csproj",
       "projectName": "ViewModel",
-      "projectPath": "F:\\final project\\MVC-Core-Project-master\\ViewModel\\ViewModel.csproj",
+      "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\ViewModel.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "F:\\final project\\MVC-Core-Project-master\\ViewModel\\obj\\",
+      "outputPath": "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -787,8 +787,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj": {
-              "projectPath": "F:\\final project\\MVC-Core-Project-master\\Models\\Models.csproj"
+            "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj": {
+              "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj"
             }
           }
         }

@@ -4,14 +4,16 @@ using Admin.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataContext.Migrations
 {
     [DbContext(typeof(AmazonContext))]
-    partial class AmazonContextModelSnapshot : ModelSnapshot
+    [Migration("20220420164934_configureAdminProfile")]
+    partial class configureAdminProfile
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,12 +47,12 @@ namespace DataContext.Migrations
                         .IsUnicode(false)
                         .HasColumnType("varchar(100)");
 
-                    b.Property<string>("profileID")
+                    b.Property<string>("adminProfileId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("profileID");
+                    b.HasIndex("adminProfileId");
 
                     b.ToTable("Admin");
                 });
@@ -768,7 +770,7 @@ namespace DataContext.Migrations
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "adminProfile")
                         .WithMany()
-                        .HasForeignKey("profileID");
+                        .HasForeignKey("adminProfileId");
 
                     b.Navigation("adminProfile");
                 });

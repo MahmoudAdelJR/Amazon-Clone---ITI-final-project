@@ -29,5 +29,12 @@ namespace Models.AuthenticationClasses
 
         [MaxLength(20)]
         public string PhoneNumber { get; set; }
+        public string Gender { get; set; }
+        [MaxLength(30)]
+        public string City { get; set; }
+        [MaxLength(50)]
+        public string Street { get; set; }
+        [MaxLength(10)]
+        public string PostalCode { get; set; }
     }
 }

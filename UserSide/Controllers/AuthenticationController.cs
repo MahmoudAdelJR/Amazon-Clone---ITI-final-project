@@ -38,7 +38,7 @@ namespace UserSide.Controllers
         }
 
 
-        // Adding User
+        // Adding Customer
 
         [HttpPost]
         [Route("Register")]
@@ -80,7 +80,10 @@ namespace UserSide.Controllers
                         Name = model.FirstName,
                         PhoneNumber = model.PhoneNumber,
                         Password = model.Password,
-                        Gender = "M",
+                        Gender = model.Gender,
+                        City = model.City,
+                        Street = model.Street,
+                        PostalCode = model.PostalCode,
                     }) ;
                     unitofWork.Save();
                     return Ok(new Response { Status = "Success", Massage = "User Created Successfully" });

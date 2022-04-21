@@ -7394,11 +7394,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj",
       "projectName": "Admin",
       "projectPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
       "outputPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Admin\\obj\\",
+=======
+      "projectUniqueName": "F:\\final project\\Amazon Clone - ITI final project\\Admin\\Admin.csproj",
+      "projectName": "Admin",
+      "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Admin\\Admin.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "F:\\final project\\Amazon Clone - ITI final project\\Admin\\obj\\",
+>>>>>>> 175b7f0495d7299ee006d883951d6a850243d8bf
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7415,6 +7423,7 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+<<<<<<< HEAD
             "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj": {
               "projectPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj"
             },
@@ -7423,6 +7432,16 @@
             },
             "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj": {
               "projectPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj"
+=======
+            "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj": {
+              "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj"
+            },
+            "F:\\final project\\Amazon Clone - ITI final project\\Repos\\Repos.csproj": {
+              "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Repos\\Repos.csproj"
+            },
+            "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\ViewModel.csproj": {
+              "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\ViewModel.csproj"
+>>>>>>> 175b7f0495d7299ee006d883951d6a850243d8bf
             }
           }
         }

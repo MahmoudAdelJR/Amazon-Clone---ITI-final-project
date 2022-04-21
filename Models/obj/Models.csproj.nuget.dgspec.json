@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Models\\obj\\",
+=======
+    "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj": {}
+  },
+  "projects": {
+    "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "F:\\final project\\Amazon Clone - ITI final project\\Models\\obj\\",
+>>>>>>> 175b7f0495d7299ee006d883951d6a850243d8bf
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "wwxqzhrmBPJ0GPsQwZcf8I1ntllchLosB0o7iXxCWz3n3303IkfLN89f22klN4e3ODWuGwYyDzd6Wa8OgBJUSA==",
   "success": true,
   "projectFilePath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
+=======
+  "dgSpecHash": "/dVzg0mRLY/mr6zmi/sai67M9lONvUOcb3sXu9pGsmpYQZS5KZCbYvI1G5QGSOinKYUBke15PrtLbgjt0JqH2g==",
+  "success": true,
+  "projectFilePath": "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj",
+>>>>>>> 175b7f0495d7299ee006d883951d6a850243d8bf
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.0\\microsoft.aspnetcore.cryptography.keyderivation.5.0.0.nupkg.sha512",

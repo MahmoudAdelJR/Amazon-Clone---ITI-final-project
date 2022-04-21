@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Admin.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Models.AuthenticationClasses;
+using Repos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,14 +17,20 @@ namespace WebApplication7.Controllers
     public class AccountController : Controller
     {
         private readonly UserManager<IdentityUser> userManager;
+        private readonly RoleManager<IdentityRole> roleManager;
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly ILogger<AccountController> logger;
+        IModelRepo<Admins> ModelRepository;
+        IUnitofWork unitofWork;
 
-        public AccountController(UserManager<IdentityUser> userManager , SignInManager<IdentityUser> signInManager , ILogger<AccountController> logger)
+        public AccountController(UserManager<IdentityUser> userManager , RoleManager<IdentityRole> _roleManager, SignInManager<IdentityUser> signInManager , ILogger<AccountController> logger, IUnitofWork _unitofWork)
         {
             this.userManager = userManager;
+            this.roleManager = _roleManager;
             this.signInManager = signInManager;
             this.logger = logger;
+            unitofWork = _unitofWork;
+            ModelRepository = unitofWork.GetAdminRepo();
         }
         public IActionResult Registration()
         {
@@ -44,6 +53,29 @@ namespace WebApplication7.Controllers
 
                 if (result.Succeeded)
                 {
+                    if (!await roleManager.RoleExistsAsync(UserRoles.Admin))
+                        await roleManager.CreateAsync(new IdentityRole(UserRoles.Admin));
+                    if (await roleManager.RoleExistsAsync(UserRoles.Admin))
+                    {
+                        await userManager.AddToRoleAsync(user, UserRoles.Admin);
+                    }
+                    try
+                    {
+                        ModelRepository.Create(new Admins
+                        {
+                            profileID = user.Id,
+                            Name = model.Email,
+                            Email = model.Email,
+                            Password = model.Password
+                        });
+                        unitofWork.Save();
+                    }
+                    catch(Exception e)
+                    {
+                        await userManager.DeleteAsync(user);
+                        ModelState.AddModelError("", e.Message);
+                        return View(model);
+                    }
                     return RedirectToAction("Login");
                 }
                 else

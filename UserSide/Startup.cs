@@ -37,6 +37,7 @@ namespace UserSide
             
             
             services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
 
             //EntityFramework
             services.AddDbContext<AmazonContext>(option =>

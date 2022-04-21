@@ -42,9 +42,9 @@ namespace Admin.Models
         public string profileID { get; set; }
         public virtual Cart Cart { get; set; }
         public virtual ICollection<CustomerContact> CustomerContacts { get; set; }
-        public virtual ICollection<CustomerProduct> CustomerProducts { get; set; }
+        //public virtual ICollection<CustomerProduct> CustomerProducts { get; set; }
         public virtual ICollection<CustomerProductsRate> CustomerProductsRates { get; set; }
-        public virtual ICollection<List> Lists { get; set; }
+        //public virtual ICollection<List> Lists { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
         public virtual IdentityUser profile { get; set; }
     }

@@ -4,14 +4,16 @@ using Admin.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataContext.Migrations
 {
     [DbContext(typeof(AmazonContext))]
-    partial class AmazonContextModelSnapshot : ModelSnapshot
+    [Migration("20220421102129_rem_CutomerProduct")]
+    partial class rem_CutomerProduct
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -263,6 +265,51 @@ namespace DataContext.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("Customer_Products_Rates");
+                });
+
+            modelBuilder.Entity("Admin.Models.List", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("CustomerId")
+                        .HasColumnType("int")
+                        .HasColumnName("customer_id");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(100)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Privacy")
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
+
+                    b.ToTable("List");
+                });
+
+            modelBuilder.Entity("Admin.Models.ListProduct", b =>
+                {
+                    b.Property<int>("ListId")
+                        .HasColumnType("int")
+                        .HasColumnName("List_id");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int")
+                        .HasColumnName("Product_id");
+
+                    b.HasKey("ListId", "ProductId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("List_products");
                 });
 
             modelBuilder.Entity("Admin.Models.Option", b =>
@@ -804,6 +851,35 @@ namespace DataContext.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Admin.Models.List", b =>
+                {
+                    b.HasOne("Admin.Models.Customer", "Customer")
+                        .WithMany("Lists")
+                        .HasForeignKey("CustomerId")
+                        .HasConstraintName("FK_List_Customer");
+
+                    b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("Admin.Models.ListProduct", b =>
+                {
+                    b.HasOne("Admin.Models.List", "lists")
+                        .WithMany("listproduct")
+                        .HasForeignKey("ListId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Admin.Models.Product", "products")
+                        .WithMany("listproduct")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("lists");
+
+                    b.Navigation("products");
+                });
+
             modelBuilder.Entity("Admin.Models.Order", b =>
                 {
                     b.HasOne("Admin.Models.Customer", "Customer")
@@ -984,7 +1060,14 @@ namespace DataContext.Migrations
 
                     b.Navigation("CustomerProductsRates");
 
+                    b.Navigation("Lists");
+
                     b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("Admin.Models.List", b =>
+                {
+                    b.Navigation("listproduct");
                 });
 
             modelBuilder.Entity("Admin.Models.Option", b =>
@@ -1002,6 +1085,8 @@ namespace DataContext.Migrations
                     b.Navigation("CartProducts");
 
                     b.Navigation("CustomerProductsRates");
+
+                    b.Navigation("listproduct");
 
                     b.Navigation("orderproduct");
 

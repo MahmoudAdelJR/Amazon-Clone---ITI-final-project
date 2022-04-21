@@ -25,10 +25,10 @@ namespace Admin.Data
         public virtual DbSet<Contact> Contacts { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<CustomerContact> CustomerContacts { get; set; }
-        public virtual DbSet<CustomerProduct> CustomerProducts { get; set; }
+        //public virtual DbSet<CustomerProduct> CustomerProducts { get; set; }
         public virtual DbSet<CustomerProductsRate> CustomerProductsRates { get; set; }
-        public virtual DbSet<List> Lists { get; set; }
-        public virtual DbSet<ListProduct> ListProducts { get; set; }
+        //public virtual DbSet<List> Lists { get; set; }
+        //public virtual DbSet<ListProduct> ListProducts { get; set; }
         public virtual DbSet<Option> Options { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderProduct> OrderProducts { get; set; }
@@ -255,28 +255,28 @@ namespace Admin.Data
 
 
             #region Customer Product Relation
-            modelBuilder.Entity<CustomerProduct>(entity =>
-            {
-                entity.HasKey(e => new { e.CustomerId, e.ProductId });
+            //modelBuilder.Entity<CustomerProduct>(entity =>
+            //{
+            //    entity.HasKey(e => new { e.CustomerId, e.ProductId });
 
-                entity.ToTable("Customer_Products");
+            //    entity.ToTable("Customer_Products");
 
-                entity.Property(e => e.CustomerId).HasColumnName("Customer_id");
+            //    entity.Property(e => e.CustomerId).HasColumnName("Customer_id");
 
-                entity.Property(e => e.ProductId).HasColumnName("Product_id");
+            //    entity.Property(e => e.ProductId).HasColumnName("Product_id");
 
-                entity.HasOne(d => d.Customer)
-                    .WithMany(p => p.CustomerProducts)
-                    .HasForeignKey(d => d.CustomerId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Customer_Products_Customer");
+            //    entity.HasOne(d => d.Customer)
+            //        .WithMany(p => p.CustomerProducts)
+            //        .HasForeignKey(d => d.CustomerId)
+            //        .OnDelete(DeleteBehavior.ClientSetNull)
+            //        .HasConstraintName("FK_Customer_Products_Customer");
 
-                entity.HasOne(d => d.Product)
-                    .WithMany(p => p.CustomerProducts)
-                    .HasForeignKey(d => d.ProductId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Customer_Products_Product");
-            });
+            //    entity.HasOne(d => d.Product)
+            //        .WithMany(p => p.CustomerProducts)
+            //        .HasForeignKey(d => d.ProductId)
+            //        .OnDelete(DeleteBehavior.ClientSetNull)
+            //        .HasConstraintName("FK_Customer_Products_Product");
+            //});
             #endregion
 
 
@@ -313,49 +313,49 @@ namespace Admin.Data
 
 
             #region List 
-            modelBuilder.Entity<List>(entity =>
-            {
-                entity.ToTable("List");
+            //modelBuilder.Entity<List>(entity =>
+            //{
+            //    entity.ToTable("List");
 
-                entity.Property(e => e.Id);
+            //    entity.Property(e => e.Id);
 
-                entity.Property(e => e.CustomerId).HasColumnName("customer_id");
+            //    entity.Property(e => e.CustomerId).HasColumnName("customer_id");
 
-                entity.Property(e => e.Name)
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+            //    entity.Property(e => e.Name)
+            //        .HasMaxLength(100)
+            //        .IsUnicode(false);
 
-                entity.Property(e => e.Privacy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+            //    entity.Property(e => e.Privacy)
+            //        .HasMaxLength(50)
+            //        .IsUnicode(false);
 
-                entity.HasOne(d => d.Customer)
-                    .WithMany(p => p.Lists)
-                    .HasForeignKey(d => d.CustomerId)
-                    .HasConstraintName("FK_List_Customer");
-            });
+            //    entity.HasOne(d => d.Customer)
+            //        .WithMany(p => p.Lists)
+            //        .HasForeignKey(d => d.CustomerId)
+            //        .HasConstraintName("FK_List_Customer");
+            //});
             #endregion
 
 
             #region List Product
-            modelBuilder.Entity<ListProduct>(entity =>
-            {
-                entity.HasKey(e => new { e.ListId, e.ProductId });
+            //modelBuilder.Entity<ListProduct>(entity =>
+            //{
+            //    entity.HasKey(e => new { e.ListId, e.ProductId });
 
-                entity.ToTable("List_products");
+            //    entity.ToTable("List_products");
 
-                entity.Property(e => e.ListId).HasColumnName("List_id");
+            //    entity.Property(e => e.ListId).HasColumnName("List_id");
 
-                entity.Property(e => e.ProductId).HasColumnName("Product_id");
+            //    entity.Property(e => e.ProductId).HasColumnName("Product_id");
 
-                entity.HasOne(d => d.products)
-                      .WithMany(p => p.listproduct)
-                        .HasForeignKey(d => d.ProductId);
+            //    entity.HasOne(d => d.products)
+            //          .WithMany(p => p.listproduct)
+            //            .HasForeignKey(d => d.ProductId);
 
-                entity.HasOne(d => d.lists)
-                    .WithMany(p => p.listproduct)
-                    .HasForeignKey(d => d.ListId);
-            });
+            //    entity.HasOne(d => d.lists)
+            //        .WithMany(p => p.listproduct)
+            //        .HasForeignKey(d => d.ListId);
+            //});
             #endregion
 
 

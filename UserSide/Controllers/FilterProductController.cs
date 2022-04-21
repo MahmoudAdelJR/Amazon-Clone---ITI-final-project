@@ -31,6 +31,8 @@ namespace UserSide.Controllers
             return result;
         }
 
+        // Test 
+
         //[HttpGet]
         //[Route("Search/{search}")]
         //public async Task<Product> Search(string search)

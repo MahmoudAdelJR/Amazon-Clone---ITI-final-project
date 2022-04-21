@@ -39,6 +39,10 @@ namespace Repos
         {
             return table;
         }
+        public async Task<IQueryable<T>> GetAll()
+        {
+            return table;
+        }
 
         public void Update(T entity)
         {

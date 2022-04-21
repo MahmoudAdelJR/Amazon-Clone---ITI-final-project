@@ -31,24 +31,22 @@ namespace UserSide.Controllers
             return result;
         }
 
-        // Test 
+        [HttpGet]
+        [Route("Search/{search}")]
+        public async Task<Product> Search(string search)
+        {
+            if (!string.IsNullOrEmpty(search))
+            {
+                var Search = await productrepo.FindByCondition(i => i.Name.Contains(search)
+                || i.Description.Contains(search));
+                var result = Search.FirstOrDefault();
+                if (Search.Any())
+                {
 
-        //[HttpGet]
-        //[Route("Search/{search}")]
-        //public async Task<Product> Search(string search)
-        //{
-        //    if (!string.IsNullOrEmpty(search))
-        //    {
-        //        var Search = await productrepo.FindByCondition(i => i.Name.Contains(search)
-        //        || i.Description.Contains(search));
-        //        var result = Search.FirstOrDefault();
-        //        if (Search.Any())
-        //        {
-
-        //            return (Product)result;
-        //        }
-        //    }
-        //    return (Product)await productrepo.Read();
-        //}
+                    return (Product)result;
+                }
+            }
+            return (Product)await productrepo.GetAll();
+        }
     }
 }

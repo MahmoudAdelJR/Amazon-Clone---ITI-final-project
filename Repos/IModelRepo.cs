@@ -12,6 +12,7 @@ namespace Repos
     {
         void Create(T entity);
         IQueryable<T> Read();
+        Task<IQueryable<T>> GetAll();
         void Update(T entity);
         void Delete(int id);
         T GetByID(int id);

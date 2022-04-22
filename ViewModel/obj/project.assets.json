@@ -766,19 +766,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj",
       "projectName": "ViewModel",
       "projectPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
       "outputPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\ViewModel\\obj\\",
-=======
-      "projectUniqueName": "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\ViewModel.csproj",
-      "projectName": "ViewModel",
-      "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\ViewModel.csproj",
-      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\obj\\",
->>>>>>> 175b7f0495d7299ee006d883951d6a850243d8bf
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -795,13 +787,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-<<<<<<< HEAD
             "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {
               "projectPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj"
-=======
-            "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj": {
-              "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj"
->>>>>>> 175b7f0495d7299ee006d883951d6a850243d8bf
             }
           }
         }
@@ -839,5 +826,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\ViewModel\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

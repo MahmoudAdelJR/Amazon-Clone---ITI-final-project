@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "/LyIgw4VT18Imh91wdAV1Y4406xjwysE3ythD73wjmJ7ad1OQcEW5S3CKW8WSfkdZ30U5MVf2i7zbd0SeWcIUg==",
   "success": true,
   "projectFilePath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj",
-=======
-  "dgSpecHash": "xl0nLnQL+IukEMZ4j0tiV7KnfoDxWb12orkEbwV7uioOWS93ZfWKikDWshpstyYLq/EBRNwneqXoWTE2BsDVKQ==",
-  "success": true,
-  "projectFilePath": "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj",
->>>>>>> 175b7f0495d7299ee006d883951d6a850243d8bf
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",
@@ -140,5 +134,12 @@
     "C:\\Users\\hp\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\DataContext\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

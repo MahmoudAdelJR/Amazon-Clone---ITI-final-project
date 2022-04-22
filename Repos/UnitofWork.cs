@@ -17,13 +17,16 @@ namespace Repos
         IModelRepo<Category> CategoryRepo;
         IModelRepo<Product> ProductRepo;
         IModelRepo<Seller> SellerRepo;
-
+        IModelRepo<Order> OrderRepo;
+        IModelRepo<Contact> ContactRepo;
         public UnitofWork(DbContext _Context,
             IModelRepo<Customer> _customerRepo, 
             IModelRepo<Admins> _adminRepo , 
             IModelRepo<Category> _categoryRepo , 
             IModelRepo<Product> _productRepo , 
-            IModelRepo<Seller> _sellerRepo)
+            IModelRepo<Seller> _sellerRepo,
+            IModelRepo<Order> _orderRepo,
+            IModelRepo<Contact> _contactRepo)
         {
             context = _Context;
             CustomerRepo = _customerRepo;
@@ -31,6 +34,8 @@ namespace Repos
             CategoryRepo = _categoryRepo;
             ProductRepo = _productRepo;
             SellerRepo = _sellerRepo;
+            OrderRepo = _orderRepo;
+            ContactRepo = _contactRepo;
         }
 
         public IModelRepo<Customer> GetCustomerRepo()
@@ -60,6 +65,15 @@ namespace Repos
         public IModelRepo<Seller> GetSellerRepo()
         {
             return SellerRepo;
+        }
+        public IModelRepo<Order> GetOrderRepo()
+        {
+            return OrderRepo;
+        }
+
+        public IModelRepo<Contact> GetContactRepo()
+        {
+            return ContactRepo;
         }
     }
 }

@@ -14,6 +14,8 @@ namespace Repos
         IModelRepo<Category> GetCategoryRepo();
         IModelRepo<Product> GetProductRepo();
         IModelRepo<Seller> GetSellerRepo();
+        IModelRepo<Order> GetOrderRepo();
+        IModelRepo<Contact> GetContactRepo();
         void Save();
     }
 }

@@ -674,3 +674,6 @@ F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.d
 F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\ref\Admin.dll
 F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.pdb
 F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.genruntimeconfig.cache
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Razor\Views\Order\Index.cshtml.g.cs
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Razor\Views\Order\update.cshtml.g.cs

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GmLPYFXWveKWxjslhZamlxhU5nC5TDj6tTpf5lRfegOSwjy8T4L6+uIE0n4oS7Gd3rCG+CTu7M9v47zGVYGOGA==",
+  "dgSpecHash": "AqyyHwSlkS8lPOxndDTXdss1+3ijSbmL/742E2snmI3rJKefXb1zWeFoVxy5IJ3X0xnKDgjEmAcOsVlwbUP2oA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj",
+  "projectFilePath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LeNoVo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\LeNoVo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",

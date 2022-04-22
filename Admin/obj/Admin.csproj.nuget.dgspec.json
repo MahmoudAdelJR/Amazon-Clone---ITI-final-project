@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj": {}
+    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj": {
+    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj",
+        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj",
         "projectName": "Admin",
-        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj",
+        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj",
         "packagesPath": "C:\\Users\\LeNoVo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Admin\\obj\\",
+        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Admin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LeNoVo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,14 +28,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj": {
-                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj"
+              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj": {
+                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj"
               },
-              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj": {
-                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj"
+              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj": {
+                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj"
               },
-              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj": {
-                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj"
+              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj": {
+                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj"
               }
             }
           }
@@ -101,14 +101,14 @@
         }
       }
     },
-    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj": {
+    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj",
+        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj",
         "projectName": "DataContext",
-        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj",
+        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj",
         "packagesPath": "C:\\Users\\LeNoVo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\DataContext\\obj\\",
+        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LeNoVo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -125,8 +125,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj"
+              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj"
               }
             }
           }
@@ -189,14 +189,14 @@
         }
       }
     },
-    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {
+    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\LeNoVo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\obj\\",
+        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LeNoVo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -253,14 +253,14 @@
         }
       }
     },
-    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj": {
+    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj",
+        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj",
         "projectName": "Repos",
-        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj",
+        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj",
         "packagesPath": "C:\\Users\\LeNoVo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Repos\\obj\\",
+        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LeNoVo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -277,8 +277,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj": {
-                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj"
+              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj": {
+                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj"
               }
             }
           }
@@ -321,14 +321,14 @@
         }
       }
     },
-    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj": {
+    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj",
+        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj",
         "projectName": "ViewModel",
-        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj",
+        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj",
         "packagesPath": "C:\\Users\\LeNoVo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\ViewModel\\obj\\",
+        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\ViewModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LeNoVo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -345,8 +345,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj"
+              "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj"
               }
             }
           }

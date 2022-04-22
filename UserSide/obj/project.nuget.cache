@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B7NnqASIWbkZ3mHsr9VJoeOhbAJrqczalA03o6q0TsjRkKmjY/cxb0AiHaCw6HdKfMv2xecY4zdHh5T5xRqujg==",
+  "dgSpecHash": "dRN2i1zt92chf8JwemZ7bVNr+AnPUazxiSIM4Ce6R2hKCtzAI/1gJ+jxVVwNE3G2EHznPG9B2D1gtjVXQQ8iNg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\UserSide\\UserSide.csproj",
+  "projectFilePath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\UserSide\\UserSide.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LeNoVo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\LeNoVo\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

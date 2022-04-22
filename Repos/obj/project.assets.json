@@ -8855,11 +8855,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj",
+      "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj",
       "projectName": "Repos",
-      "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj",
+      "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj",
       "packagesPath": "C:\\Users\\LeNoVo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Repos\\obj\\",
+      "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Repos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LeNoVo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8876,8 +8876,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj": {
-              "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj"
+            "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj": {
+              "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj"
             }
           }
         }

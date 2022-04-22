@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ghCqRfVSrENHHsVVhBaCRAhuDS+sLuh3iDomuHx20+xKkhjWG4YDJyQV4B7CNz/mqgZ/vVSmVnAmcnfaUn6Ucg==",
+  "dgSpecHash": "iao1Q7oNmO5Ws63u+nJ2Ly9InzogpeKkdJpvIK7yqb2xa8TYqczcU258eUmNdBY0tMMexp8VIUEt1tqbs55yVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
+  "projectFilePath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LeNoVo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",
     "C:\\Users\\LeNoVo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.0\\microsoft.aspnetcore.cryptography.keyderivation.5.0.0.nupkg.sha512",

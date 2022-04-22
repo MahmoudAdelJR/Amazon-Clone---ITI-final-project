@@ -62,8 +62,8 @@ namespace UserSide.Controllers
         [Route("Update")]
         public IEnumerable<Customer> Update(int id, [FromBody] JsonPatchDocument<Customer> jsonPatchDocument)
         {
-            Customer oldStudent = ModelRepository.GetByID(id);
-            jsonPatchDocument.ApplyTo(oldStudent);
+            Customer oldCustomer = ModelRepository.GetByID(id);
+            jsonPatchDocument.ApplyTo(oldCustomer);
             unitofWork.Save();
             return ModelRepository.Read();
         }

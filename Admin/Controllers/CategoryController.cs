@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ViewModel;
 
 namespace Admin.Controllers
 {
@@ -35,20 +36,20 @@ namespace Admin.Controllers
         }
 
         // GET: ProductController1/Create
-        public ActionResult Create()
+        public ActionResult Create(CategoryViewModel CVM )
         {
-
-            return View();
+            CVM.categories = ModelRepository.Read();
+            return View(CVM);
         }
 
         // POST: ProductController1/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Category c)
+        public ActionResult Create(CategoryViewModel c, int id)
         {
             try
             {
-                ModelRepository.Create(c);
+                ModelRepository.Create(c.ToModel());
                 unitofWork.Save();
                 return RedirectToAction(nameof(Index));
             }

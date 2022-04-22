@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ViewModel;
 
 namespace Admin.Controllers
 {
@@ -15,10 +16,14 @@ namespace Admin.Controllers
 
         IUnitofWork unitofWork;
         IModelRepo<Product> ModelRepository;
+        IModelRepo<Category> categoryRepository;
+        IModelRepo<Seller> sellerRepository;
         public ProductController(IUnitofWork _unitofWork)
         {
             unitofWork = _unitofWork;
             ModelRepository = unitofWork.GetProductRepo();
+            categoryRepository = unitofWork.GetCategoryRepo();
+            sellerRepository = unitofWork.GetSellerRepo();
         }
 
         public ActionResult Index()
@@ -35,20 +40,23 @@ namespace Admin.Controllers
         }
 
         // GET: ProductController1/Create
-        public ActionResult Create()
+        public ActionResult Create(ProductVM PVM)
         {
-
-            return View();
+            var cat = categoryRepository.Read();
+            var sellers = sellerRepository.Read();
+            PVM.categories = cat;
+            PVM.sellers = sellers;
+            return View(PVM);
         }
 
         // POST: ProductController1/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Product p)
+        public ActionResult Create(ProductVM PVM, int id)
         {
             try
             {
-                ModelRepository.Create(p);
+                ModelRepository.Create(PVM.ToModel());
                 unitofWork.Save();
                 return RedirectToAction(nameof(Index));
             }

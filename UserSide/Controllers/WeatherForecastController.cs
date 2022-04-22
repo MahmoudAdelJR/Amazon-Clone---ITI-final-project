@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace UserSide.Controllers
 {
     [Authorize(Roles = UserRoles.Customer)]
-    //[Authorize]
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase

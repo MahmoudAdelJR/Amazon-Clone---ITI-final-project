@@ -8,11 +8,11 @@ namespace Admin.Models
 {
     public class Seller : BaseClass
     {
-        public Seller()
-        {
-            Products = new HashSet<Product>();
-            SellerContacts = new HashSet<SellerContact>();
-        }
+        //public Seller()
+        //{
+        //    Products = new HashSet<Product>();
+        //    SellerContacts = new HashSet<SellerContact>();
+        //}
 
         public string Name { get; set; }
         public string Email { get; set; }

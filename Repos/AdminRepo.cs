@@ -4,6 +4,7 @@ using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,10 +39,19 @@ namespace Repos
         {
             return table;
         }
+        public async Task<IQueryable<T>> GetAll()
+        {
+            return table;
+        }
 
         public void Update(T entity)
         {
             context.Entry(entity).State = EntityState.Modified;
+        }
+
+        public async Task<IQueryable<T>> FindByCondition(Expression<Func<T, bool>> expression)
+        {
+            return table.Where(expression).AsNoTracking();
         }
 
     }

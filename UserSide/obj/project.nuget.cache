@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "C9PSkNfbbQQLgQajjehJXPwEi8ZPWrgSK4n9TyjuoKy6MlEfR5VjUBzzf5/2xQHJ/Tf1ubHO1gmwOyLe16zRLg==",
   "success": true,
   "projectFilePath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\UserSide\\UserSide.csproj",
+=======
+  "dgSpecHash": "dRN2i1zt92chf8JwemZ7bVNr+AnPUazxiSIM4Ce6R2hKCtzAI/1gJ+jxVVwNE3G2EHznPG9B2D1gtjVXQQ8iNg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\UserSide\\UserSide.csproj",
+>>>>>>> fb464397a4975187e9b5a21833c68f76c3e719d4
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

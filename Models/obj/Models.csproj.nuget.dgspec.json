@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Models\\obj\\",
+=======
+    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\LeNoVo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\obj\\",
+>>>>>>> fb464397a4975187e9b5a21833c68f76c3e719d4
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",

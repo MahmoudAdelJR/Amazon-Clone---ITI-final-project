@@ -766,11 +766,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj",
       "projectName": "ViewModel",
       "projectPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
       "outputPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\ViewModel\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj",
+      "projectName": "ViewModel",
+      "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj",
+      "packagesPath": "C:\\Users\\LeNoVo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\ViewModel\\obj\\",
+>>>>>>> fb464397a4975187e9b5a21833c68f76c3e719d4
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -787,8 +795,13 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+<<<<<<< HEAD
             "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {
               "projectPath": "F:\\ITI-three months\\مشروع التخرج\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj"
+=======
+            "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\Last one\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj"
+>>>>>>> fb464397a4975187e9b5a21833c68f76c3e719d4
             }
           }
         }

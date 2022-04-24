@@ -21,6 +21,13 @@ namespace UserSide.Controllers
             unitofWork = _unitofWork;
             ModelRepository = unitofWork.GetCustomerRepo();
         }
+        [HttpPost]
+        public IActionResult AddCustomer(Customer _customer)
+        {
+            ModelRepository.Create(_customer);
+            unitofWork.Save();
+            return Ok();
+        }
         // GET: api/<CustomerController>
         [HttpGet]
         public ActionResult<IEnumerable<Customer>> Get()

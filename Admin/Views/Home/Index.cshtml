@@ -1,6 +1,7 @@
-﻿
- @using ViewModel
+﻿@using Microsoft.AspNetCore.Identity;
+@using ViewModel
 @model HomeViewModel
+@inject SignInManager<IdentityUser> signInManager
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -12,9 +13,14 @@
                     <img src="vendors/images/banner-img.png" alt="">
                 </div>
                 <div class="col-md-8">
-                    <h4 class="font-20 weight-500 mb-10 text-capitalize">
-                        Welcome back
-                    </h4>
+
+                    @if (signInManager.IsSignedIn(User))
+                    {
+                        <h4 class="font-20 weight-500 mb-10 text-capitalize">
+                            Welcome back @User.Identity.Name
+                        </h4>
+                    }
+
                     <p class="font-18 max-width-600">A dashboard is a visual display of all of your data. While it can be used in all kinds of different ways, its primary intention is to provide information at-a-glance, such as KPIs. A dashboard usually sits on its own page and receives information from a linked database.</p>
                 </div>
             </div>
@@ -73,7 +79,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="card-box mb-30">
             <h2 class="h4 pd-20">Best Selling Products</h2>
             <table class="data-table table nowrap">

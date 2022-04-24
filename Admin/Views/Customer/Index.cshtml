@@ -11,8 +11,6 @@
                     <tr>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Phone Number</th>
-                        <th>Gender</th>
                         <th>Delete</th>
                         <th class="datatable-nosort">Action</th>
                     </tr>
@@ -23,12 +21,13 @@
             <tr>
             <td>@item.Name</td>
             <td>@item.Email</td>
-            <td>@item.PhoneNumber</td>
-            <td>@item.Gender</td>
             <td>
                 <i class="fa-solid fa-trash-can">
                     @Html.ActionLink("Delete", "Delete", new { @Id = item.Id })
                 </i>
+            </td>
+            <td>
+                 @Html.ActionLink("Details", "Details", new { @Id = item.Id })
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new

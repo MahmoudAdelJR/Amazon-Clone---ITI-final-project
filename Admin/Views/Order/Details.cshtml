@@ -1,0 +1,22 @@
+﻿
+
+@using Models
+
+@model Order
+
+    <div class="main-container">
+        <div class="pd-ltr-20">
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title"> Customer Id : @Model.CustomerId</h5>
+                    <p class="card-text"> Address : @Model.OrderAddress</p>
+                    <p class="card-text"> Date : @Model.OrderDate</p>
+                    <p class="card-text"> End Time : @Model.EstimatedDeliveryDate</p>
+                    <p class="card-text"> Total Price : @Model.TotalPrice</p>
+                    <a href="~/Order/Index" class="btn btn-primary">Back to List</a>
+                </div>
+            </div>
+
+        </div>
+    </div>

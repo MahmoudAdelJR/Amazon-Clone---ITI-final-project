@@ -9,17 +9,11 @@
             <table class="data-table table nowrap">
                 <thead>
                     <tr>
-                        <th>Id</th>
                         <th>Name</th>
-                        <th>Discount</th>
-                        <th>Shipping</th>
                         <th>Price</th>
                         <th>Picture</th>
-                        <th>Stock</th>
-                        <th>Brand</th>
-                        <th>Description</th>
-                        <th>SubCategoryID</th>
-                        <th>SellerId</th>
+                        <th>Details</th>
+                        <th>Edit</th>
                         <th>Delete</th>
                         <th class="datatable-nosort">Action</th>
                     </tr>
@@ -28,21 +22,11 @@
                     @foreach (var item in Model)
                     {
                     <tr>
-                        <td>@item.Id</td>
-                        <td>@item.Name</td>
-                        <td>@item.Discount</td>
-                        <td>@item.Shipping</td>
+                        <td  style="white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; max-width: 100ch !important; ">@item.Name</td>
                         <td>@item.Price</td>
                         <td> <img src="@item.Picture" /> </td>
-                        <td>@item.Stock</td>
-                        <td>@item.Brand</td>
-                        <td>@item.Description</td>
-                        <td>@item.categoryId</td>
-                        <td>@item.SellerId</td>
                         <td>
-                            <i class="fa-solid fa-trash-can">
-                                @Html.ActionLink("Delete", "Delete", new { @Id = item.Id })
-                            </i>
+                            @Html.ActionLink("Details", "Details", new { @Id = item.Id })
                         </td>
                         <td>
                             @Html.ActionLink("Edit", "Edit", new
@@ -57,10 +41,15 @@
                            @Brand = item.Brand,
                            @Description = item.Description,
                            @SubCategoryID = item.categoryId,
-                           @SellerId=item.SellerId
+                           @SellerId = item.SellerId
                        })
-
                         </td>
+                        <td>
+                            <i class="fa-solid fa-trash-can">
+                                @Html.ActionLink("Delete", "Delete", new { @Id = item.Id })
+                            </i>
+                        </td>
+
                         <td>
                             <div class="dropdown">
                                 <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">

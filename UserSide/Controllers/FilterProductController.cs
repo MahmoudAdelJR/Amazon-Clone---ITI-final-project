@@ -23,6 +23,15 @@ namespace UserSide.Controllers
             productrepo = unitOfWork.GetProductRepo();
             categoryRepo = unitOfWork.GetCategoryRepo();
         }
+
+        [HttpGet]
+        [Route("AllCategories")]
+        public async Task<IQueryable<Category>> getAllCategories()
+        {
+            var result = await categoryRepo.GetAll();
+            return result;
+        }
+
         [HttpGet]
         [Route("ProductByCatID")]
         public async Task<IQueryable<Product>> GetPrdByCatID(int CatID, string brand)
@@ -30,6 +39,8 @@ namespace UserSide.Controllers
             var result = await productrepo.FindByCondition(i => i.categoryId == CatID );
             return result;
         }
+        
+
 
         // Search for product by name
         [HttpGet]

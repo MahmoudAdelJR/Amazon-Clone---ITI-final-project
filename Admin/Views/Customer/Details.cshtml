@@ -1,0 +1,24 @@
+﻿
+
+@using Models
+
+@model Customer
+
+    <div class="main-container">
+        <div class="pd-ltr-20">
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title"> User Name : @Model.Name</h5>
+                    <h5 class="card-title"> Email : @Model.Email</h5>
+                    <p class="card-text"> PhoneNumber : @Model.PhoneNumber</p>
+                    <p class="card-text"> Gender : @Model.Gender</p>
+                    <p class="card-text"> Postal Code : @Model.PostalCode</p>
+                    <p class="card-text"> City : @Model.City</p>
+                    <p class="card-text"> Street : @Model.Street</p>
+                    <a href="~/Customer/Index" class="btn btn-primary">Back to List</a>
+                </div>
+            </div>
+
+        </div>
+    </div>

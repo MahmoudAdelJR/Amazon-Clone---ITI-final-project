@@ -1,0 +1,25 @@
+﻿
+
+@using Models
+
+@model Product
+
+    <div class="main-container">
+        <div class="pd-ltr-20">
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <img src="@Model.Picture">
+                    <h5 class="card-title"> Name : @Model.Name</h5>
+                    <p class="card-text"> Price : @Model.Price</p>
+                    <p class="card-text"> Shipping : @Model.Shipping</p>
+                    <p class="card-text"> Stock : @Model.Stock</p>
+                    <p class="card-text"> Brand : @Model.Brand</p>
+                    <p class="card-text"> Description : @Model.Description</p>
+                    <p class="card-text"> Category : @Model.categoryId</p>
+                    <a href="~/Product/Index" class="btn btn-primary">Back to List</a>
+                </div>
+            </div>
+
+        </div>
+    </div>

@@ -3,25 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataContext.Migrations
 {
-    public partial class autoGenerateIDs : Migration
+    public partial class @in : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Admin",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false),
-                    Email = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false),
-                    Password = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Admin", x => x.ID);
-                });
-
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -96,21 +81,6 @@ namespace DataContext.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Creditcards",
-                columns: table => new
-                {
-                    Creditcard_id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Card_expiredate = table.Column<DateTime>(type: "date", nullable: false),
-                    Card_Number = table.Column<int>(type: "int", nullable: false),
-                    Card_pin = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Creditcards", x => x.Creditcard_id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "options",
                 columns: table => new
                 {
@@ -143,28 +113,6 @@ namespace DataContext.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Contact",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Phone = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime", nullable: true),
-                    Message = table.Column<string>(type: "varchar(220)", unicode: false, maxLength: 220, nullable: false),
-                    Admin_id = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Contact", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Contact_Admin",
-                        column: x => x.Admin_id,
-                        principalTable: "Admin",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -183,6 +131,28 @@ namespace DataContext.Migrations
                         principalTable: "AspNetRoles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Admin",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false),
+                    Email = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false),
+                    Password = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false),
+                    profileID = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Admin", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Admin_AspNetUsers_profileID",
+                        column: x => x.profileID,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -284,11 +254,18 @@ namespace DataContext.Migrations
                     PostalCode = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: true),
                     City = table.Column<string>(type: "varchar(20)", unicode: false, maxLength: 20, nullable: true),
                     Street = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: true),
-                    Cart_id = table.Column<int>(type: "int", nullable: true)
+                    Cart_id = table.Column<int>(type: "int", nullable: true),
+                    profileID = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Customer", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Customer_AspNetUsers_profileID",
+                        column: x => x.profileID,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Customer_Cart",
                         column: x => x.Cart_id,
@@ -332,71 +309,24 @@ namespace DataContext.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Seller_contacts",
-                columns: table => new
-                {
-                    Contact_id = table.Column<int>(type: "int", nullable: false),
-                    Seller_id = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Seller_contacts", x => new { x.Contact_id, x.Seller_id });
-                    table.ForeignKey(
-                        name: "FK_Seller_contacts_Contact",
-                        column: x => x.Contact_id,
-                        principalTable: "Contact",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Seller_contacts_Seller",
-                        column: x => x.Seller_id,
-                        principalTable: "Seller",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Customer_contacts",
-                columns: table => new
-                {
-                    Contact_id = table.Column<int>(type: "int", nullable: false),
-                    Customer_id = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Customer_contacts", x => new { x.Contact_id, x.Customer_id });
-                    table.ForeignKey(
-                        name: "FK_Customer_contacts_Contact",
-                        column: x => x.Contact_id,
-                        principalTable: "Contact",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Customer_contacts_Customer",
-                        column: x => x.Customer_id,
-                        principalTable: "Customer",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "List",
+                name: "Contact",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: true),
-                    Privacy = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: true),
-                    customer_id = table.Column<int>(type: "int", nullable: true)
+                    Phone = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime", nullable: true),
+                    Message = table.Column<string>(type: "varchar(220)", unicode: false, maxLength: 220, nullable: false),
+                    Admin_id = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_List", x => x.Id);
+                    table.PrimaryKey("PK_Contact", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_List_Customer",
-                        column: x => x.customer_id,
-                        principalTable: "Customer",
-                        principalColumn: "Id",
+                        name: "FK_Contact_Admin",
+                        column: x => x.Admin_id,
+                        principalTable: "Admin",
+                        principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -410,18 +340,11 @@ namespace DataContext.Migrations
                     Estimated_Delivery_Date = table.Column<DateTime>(type: "datetime", nullable: true),
                     Order_address = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: true),
                     Total_Price = table.Column<int>(type: "int", nullable: false),
-                    Creditcard_id = table.Column<int>(type: "int", nullable: true),
                     Customer_id = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Orders", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Orders_Creditcards",
-                        column: x => x.Creditcard_id,
-                        principalTable: "Creditcards",
-                        principalColumn: "Creditcard_id",
-                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Orders_Customer",
                         column: x => x.Customer_id,
@@ -449,30 +372,6 @@ namespace DataContext.Migrations
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Cart_Products_Product",
-                        column: x => x.Product_id,
-                        principalTable: "Product",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Customer_Products",
-                columns: table => new
-                {
-                    Customer_id = table.Column<int>(type: "int", nullable: false),
-                    Product_id = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Customer_Products", x => new { x.Customer_id, x.Product_id });
-                    table.ForeignKey(
-                        name: "FK_Customer_Products_Customer",
-                        column: x => x.Customer_id,
-                        principalTable: "Customer",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Customer_Products_Product",
                         column: x => x.Product_id,
                         principalTable: "Product",
                         principalColumn: "Id",
@@ -550,27 +449,51 @@ namespace DataContext.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "List_products",
+                name: "Customer_contacts",
                 columns: table => new
                 {
-                    List_id = table.Column<int>(type: "int", nullable: false),
-                    Product_id = table.Column<int>(type: "int", nullable: false)
+                    Contact_id = table.Column<int>(type: "int", nullable: false),
+                    Customer_id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_List_products", x => new { x.List_id, x.Product_id });
+                    table.PrimaryKey("PK_Customer_contacts", x => new { x.Contact_id, x.Customer_id });
                     table.ForeignKey(
-                        name: "FK_List_products_List_List_id",
-                        column: x => x.List_id,
-                        principalTable: "List",
+                        name: "FK_Customer_contacts_Contact",
+                        column: x => x.Contact_id,
+                        principalTable: "Contact",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_List_products_Product_Product_id",
-                        column: x => x.Product_id,
-                        principalTable: "Product",
+                        name: "FK_Customer_contacts_Customer",
+                        column: x => x.Customer_id,
+                        principalTable: "Customer",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Seller_contacts",
+                columns: table => new
+                {
+                    Contact_id = table.Column<int>(type: "int", nullable: false),
+                    Seller_id = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Seller_contacts", x => new { x.Contact_id, x.Seller_id });
+                    table.ForeignKey(
+                        name: "FK_Seller_contacts_Contact",
+                        column: x => x.Contact_id,
+                        principalTable: "Contact",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Seller_contacts_Seller",
+                        column: x => x.Seller_id,
+                        principalTable: "Seller",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -597,6 +520,11 @@ namespace DataContext.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Admin_profileID",
+                table: "Admin",
+                column: "profileID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -658,14 +586,14 @@ namespace DataContext.Migrations
                 column: "Cart_id");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Customer_profileID",
+                table: "Customer",
+                column: "profileID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Customer_contacts_Customer_id",
                 table: "Customer_contacts",
                 column: "Customer_id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Customer_Products_Product_id",
-                table: "Customer_Products",
-                column: "Product_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Customer_Products_Rates_Product_id",
@@ -673,24 +601,9 @@ namespace DataContext.Migrations
                 column: "Product_id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_List_customer_id",
-                table: "List",
-                column: "customer_id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_List_products_Product_id",
-                table: "List_products",
-                column: "Product_id");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Order_products_Product_id",
                 table: "Order_products",
                 column: "Product_id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Orders_Creditcard_id",
-                table: "Orders",
-                column: "Creditcard_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_Customer_id",
@@ -747,13 +660,7 @@ namespace DataContext.Migrations
                 name: "Customer_contacts");
 
             migrationBuilder.DropTable(
-                name: "Customer_Products");
-
-            migrationBuilder.DropTable(
                 name: "Customer_Products_Rates");
-
-            migrationBuilder.DropTable(
-                name: "List_products");
 
             migrationBuilder.DropTable(
                 name: "Order_products");
@@ -771,12 +678,6 @@ namespace DataContext.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "List");
-
-            migrationBuilder.DropTable(
                 name: "Orders");
 
             migrationBuilder.DropTable(
@@ -787,9 +688,6 @@ namespace DataContext.Migrations
 
             migrationBuilder.DropTable(
                 name: "Contact");
-
-            migrationBuilder.DropTable(
-                name: "Creditcards");
 
             migrationBuilder.DropTable(
                 name: "Customer");
@@ -805,6 +703,9 @@ namespace DataContext.Migrations
 
             migrationBuilder.DropTable(
                 name: "Cart");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
         }
     }
 }

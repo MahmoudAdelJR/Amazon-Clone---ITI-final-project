@@ -53,7 +53,7 @@ namespace UserSide.Controllers
             {
                 orders = orders.Where(order => order.TotalPrice <= maxPrice);
             }
-            return Ok(orders.Select(o=>o.orderproduct).ToList());
+            return Ok(orders.ToList());
         }
         [HttpPost]
         [Route("add")]
@@ -75,6 +75,11 @@ namespace UserSide.Controllers
             unitOfWork.Save();
             return Ok();
 
+        }
+        [HttpGet("getDetails")]
+        public IActionResult getOrderDetails(int id)
+        {
+            return Ok(orderRepo.Read().Where(o => o.Id == id).Select(o => o.orderproduct).ToList());
         }
     }
 }

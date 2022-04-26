@@ -52,17 +52,17 @@ namespace Admin.Controllers
 
         // POST: ProductController1/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult Create(CategoryViewModel c , IFormFile ImageData)
         {
             
-            var filePath = Path.GetTempFileName(); //we are using Temp file name just for the example. Add your own file path.
+           // var filePath = Path.GetTempFileName(); //we are using Temp file name just for the example. Add your own file path.
             //ImageData.Add(filePath);
             var path = Path.Combine(Environment.ContentRootPath, "wwwroot/pics");
             //using (var stream = new FileStream(path, FileMode.Create))
             //{
                 var e = Image.Load(ImageData.OpenReadStream());
-                //e.SaveAsJpeg(@"F:\");
+                e.SaveAsJpeg(path);
             
         //        await ImageData.CopyToAsync(stream);
         //}

@@ -173,3 +173,4 @@ C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Admin\obj\Debug\net5.0\Razor\Views\Customer\Details.cshtml.g.cs
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Admin\obj\Debug\net5.0\Razor\Views\Order\Details.cshtml.g.cs
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Admin\obj\Debug\net5.0\Razor\Views\Product\Details.cshtml.g.cs
+C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Admin\obj\Debug\net5.0\Razor\Views\Category\Details.cshtml.g.cs

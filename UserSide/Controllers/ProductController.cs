@@ -38,7 +38,7 @@ namespace User_Side_API.Controllers
             return Ok(Product.Read().ToList());
         }
         //read one product
-        [HttpGet("{id}")]
+        [HttpGet("ProductByID/{ID}")]
         public IActionResult GetByID(int ID)
         {
             var prd = Product.GetByID(ID);

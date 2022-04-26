@@ -18,8 +18,9 @@
                         <th>Order Date</th>
                         <th>Customer ID</th>
                         <th> Estimated Delivery Date</th>
+                        <th>Details</th>
+                        <th>Edit</th>
                         <th>Delete</th>
-                        <th>update</th>
                         @*<th class="datatable-nosort">Action</th>*@
                     </tr>
                 </thead>
@@ -33,24 +34,28 @@
                         <td>@item.CustomerId</td>
                         <td>@item.EstimatedDeliveryDate</td>
                         <td>
+                            @Html.ActionLink("Details", "Details", new { @Id = item.Id })
+                        </td>
+                        <td>
+                            <i class="fa-solid fa-adjust">
+                                @Html.ActionLink("update", "update", new
+                           {
+                               @Id = item.Id,
+                               EstimatedDeliveryDate = item.EstimatedDeliveryDate,
+                               CustomerId = item.CustomerId,
+                               OrderDate = item.OrderDate,
+                               OrderAddress = item.OrderAddress
+                           })
+                            </i>
+                        </td>
+                        <td>
                             <i class="fa-solid fa-trash-can">
                                 @Html.ActionLink("Delete", "Delete", new { @Id = item.Id })
                             </i>
                         </td>
+
                         <td>
-                            <i class="fa-solid fa-adjust">
-                                @Html.ActionLink("update", "update", new { @Id = item.Id })
-                            </i>
-                        </td>
-                        <td>
-                            @*@Html.ActionLink("Edit", "Edit", new
-            {
-                @Id = item.Id,
-                @Name = item.Name,
-            @Email = item.Email,
-                @PhoneNumber = item.PhoneNumber,
-                @Gender = item.Gender
-            })*@
+
 
                         </td>
                         <td>

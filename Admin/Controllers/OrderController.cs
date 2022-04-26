@@ -47,5 +47,10 @@ namespace Admin.Controllers
             unitofWork.Save();
             return RedirectToAction("index");
         }
+
+        public ActionResult Details(int Id)
+        {
+            return View(OrderRepository.GetByID(Id));
+        }
     }
 }

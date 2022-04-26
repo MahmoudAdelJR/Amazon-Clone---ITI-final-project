@@ -89,5 +89,10 @@ namespace Admin.Controllers
             unitofWork.Save();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Details(int Id)
+        {
+            return View(ModelRepository.GetByID(Id));
+        }
     }
 }

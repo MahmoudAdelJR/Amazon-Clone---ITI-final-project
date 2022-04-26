@@ -10,8 +10,13 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataContext.Migrations
 {
     [DbContext(typeof(AmazonContext))]
+<<<<<<<< HEAD:DataContext/Migrations/20220423001829_addOrderStatus.Designer.cs
     [Migration("20220423001829_addOrderStatus")]
     partial class addOrderStatus
+========
+    [Migration("20220424184409_in")]
+    partial class @in
+>>>>>>>> 8b33e3683892f9ccf12e6810bf97b0bd83c1b3e7:DataContext/Migrations/20220424184409_in.Designer.cs
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

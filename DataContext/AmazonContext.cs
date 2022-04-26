@@ -44,7 +44,7 @@ namespace Admin.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=AmazonClone;Integrated Security=True");
+                optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-O7GDQ3B\OMAR;Initial Catalog=AmazonClone2;Integrated Security=True");
             }
         }
 

@@ -17,9 +17,9 @@ namespace Admin.Models
         public string Phone { get; set; }
         public DateTime? Date { get; set; }
         public string Message { get; set; }
-        public int? AdminId { get; set; }
+        //public int? AdminId { get; set; }
 
-        public virtual Admins Admin { get; set; }
+        //public virtual Admins Admin { get; set; }
         public virtual ICollection<CustomerContact> CustomerContacts { get; set; }
         public virtual ICollection<SellerContact> SellerContacts { get; set; }
     }

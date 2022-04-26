@@ -1,0 +1,88 @@
+﻿
+@using ViewModel
+
+@model SubCategoryViewModel
+
+<div class="main-container">
+    <div class="pd-ltr-20">
+
+        <form class="form-horizontal" action="~/Category/Create" method="post">
+            <h4>Add SubCategory</h4>
+            <hr />
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                @Html.ValidationMessageFor(i => i.Name)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name_AR, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.Name_AR, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                @Html.ValidationMessageFor(i => i.Name_AR)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description_AR, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.Description_AR, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Picture, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.Picture, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @*  @Html.LabelFor(model => model.Picture, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                <div class="col-md-10">
+                    @Html.TextBox("file", "", new { type = "file" }) <br />
+                    <input type="file" name="ImageData" id="ImageData" />
+                    @* @Html.TextBoxFor(model => model.Picture, new { htmlAttributes = new { @class = "form-control" } })*@
+                </div>
+            </div>
+
+            <div class="form-group">
+                @{
+                    List<SelectListItem> listItems = new List<SelectListItem>();
+                    foreach (var item in Model.categories)
+                    {
+
+                        listItems.Add(new SelectListItem
+                        {
+                            Text = item.Name,
+                            Value = item.Id.ToString()
+                        });
+                    }
+
+                }
+                @Html.DropDownListFor(model => model.ParentId, listItems, "Select Category")
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+
+        <div class="footer-wrap pd-20 mb-20 card-box">
+            DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
+        </div>
+    </div>
+</div>

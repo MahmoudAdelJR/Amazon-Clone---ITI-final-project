@@ -19,6 +19,9 @@ namespace Repos
         IModelRepo<Seller> SellerRepo;
         IModelRepo<Order> OrderRepo;
         IModelRepo<Contact> ContactRepo;
+        IModelRepo<SellerContact> SellerContactRepo;
+        IModelRepo<CustomerContact> CustomerContactRepo;
+        IModelRepo<Cart> CartRepo;
         public UnitofWork(DbContext _Context,
             IModelRepo<Customer> _customerRepo, 
             IModelRepo<Admins> _adminRepo , 
@@ -26,7 +29,11 @@ namespace Repos
             IModelRepo<Product> _productRepo , 
             IModelRepo<Seller> _sellerRepo,
             IModelRepo<Order> _orderRepo,
-            IModelRepo<Contact> _contactRepo)
+            IModelRepo<Contact> _contactRepo,
+            IModelRepo<SellerContact> _sellerContactRepo,
+            IModelRepo<CustomerContact> _customerContactRepo
+            //CartRepository _cartRepo
+            )
         {
             context = _Context;
             CustomerRepo = _customerRepo;
@@ -36,12 +43,19 @@ namespace Repos
             SellerRepo = _sellerRepo;
             OrderRepo = _orderRepo;
             ContactRepo = _contactRepo;
+            SellerContactRepo = _sellerContactRepo;
+            CustomerContactRepo = _customerContactRepo;
+           // CartRepo = _cartRepo;
         }
 
         public IModelRepo<Customer> GetCustomerRepo()
         {
             return CustomerRepo;
         }
+        //public IModelRepo<Cart> GetCartRepo()
+        //{
+        //    return CartRepo;
+        //}
         public IModelRepo<Admins> GetAdminRepo()
         {
             return AdminRepo;
@@ -74,6 +88,14 @@ namespace Repos
         public IModelRepo<Contact> GetContactRepo()
         {
             return ContactRepo;
+        }
+        public IModelRepo<SellerContact> GetSellerContactRepo()
+        {
+            return SellerContactRepo;
+        }
+        public IModelRepo<CustomerContact> GetCustomerContactRepo()
+        {
+            return CustomerContactRepo;
         }
     }
 }

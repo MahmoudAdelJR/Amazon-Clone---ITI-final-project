@@ -26,8 +26,6 @@ namespace Admin.Models
         public string Name { get; set; }
         [Required(ErrorMessage = "Email is Required")]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Password is Required")]
-        public string Password { get; set; }
         [Required(ErrorMessage = "PhoneNumber is Required")]
         public string PhoneNumber { get; set; }
         [Required(ErrorMessage = "Gender is Required")]

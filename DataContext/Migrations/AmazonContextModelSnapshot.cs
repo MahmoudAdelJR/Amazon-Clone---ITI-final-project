@@ -30,20 +30,12 @@ namespace DataContext.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("profileID")
                         .HasColumnType("nvarchar(450)");
@@ -96,61 +88,32 @@ namespace DataContext.Migrations
 
                     b.Property<string>("Description")
                         .HasMaxLength(220)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(220)");
+                        .HasColumnType("nvarchar(220)");
+
+                    b.Property<string>("Description_AR")
+                        .HasMaxLength(220)
+                        .HasColumnType("nvarchar(220)");
 
                     b.Property<string>("Name")
                         .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Name_AR")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Picture")
                         .HasMaxLength(1000)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(1000)");
+                        .HasColumnType("nvarchar(1000)");
 
-                    b.Property<int?>("SuppCatId")
-                        .HasColumnType("int")
-                        .HasColumnName("SuppCatID");
+                    b.Property<int?>("parentId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SuppCatId");
+                    b.HasIndex("parentId");
 
                     b.ToTable("Category");
-                });
-
-            modelBuilder.Entity("Admin.Models.Contact", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int?>("AdminId")
-                        .HasColumnType("int")
-                        .HasColumnName("Admin_id");
-
-                    b.Property<DateTime?>("Date")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("Message")
-                        .IsRequired()
-                        .HasMaxLength(220)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(220)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AdminId");
-
-                    b.ToTable("Contact");
                 });
 
             modelBuilder.Entity("Admin.Models.Customer", b =>
@@ -166,49 +129,36 @@ namespace DataContext.Migrations
 
                     b.Property<string>("City")
                         .HasMaxLength(20)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Gender")
                         .IsRequired()
                         .HasMaxLength(1)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(1)");
+                        .HasColumnType("nvarchar(1)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)")
+                        .HasColumnType("nvarchar(50)")
                         .HasColumnName("Phone_number");
 
                     b.Property<string>("PostalCode")
                         .HasMaxLength(10)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(10)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("Street")
                         .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("profileID")
                         .HasColumnType("nvarchar(450)");
@@ -224,15 +174,29 @@ namespace DataContext.Migrations
 
             modelBuilder.Entity("Admin.Models.CustomerContact", b =>
                 {
-                    b.Property<int>("ContactId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("Contact_id");
+                        .UseIdentityColumn();
 
                     b.Property<int>("CustomerId")
                         .HasColumnType("int")
                         .HasColumnName("Customer_id");
 
-                    b.HasKey("ContactId", "CustomerId");
+                    b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasMaxLength(220)
+                        .HasColumnType("nvarchar(220)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
 
@@ -275,8 +239,7 @@ namespace DataContext.Migrations
 
                     b.Property<string>("OptionName")
                         .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)")
+                        .HasColumnType("nvarchar(50)")
                         .HasColumnName("option_name");
 
                     b.HasKey("Id");
@@ -301,8 +264,7 @@ namespace DataContext.Migrations
 
                     b.Property<string>("OrderAddress")
                         .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)")
+                        .HasColumnType("nvarchar(100)")
                         .HasColumnName("Order_address");
 
                     b.Property<DateTime?>("OrderDate")
@@ -312,6 +274,9 @@ namespace DataContext.Migrations
                     b.Property<int>("TotalPrice")
                         .HasColumnType("int")
                         .HasColumnName("Total_Price");
+
+                    b.Property<int>("status")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -350,14 +315,22 @@ namespace DataContext.Migrations
                     b.Property<string>("Brand")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Brand_AR")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(5000)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(5000)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description_AR")
+                        .IsRequired()
+                        .HasMaxLength(5000)
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double?>("Discount")
                         .HasColumnType("float");
@@ -365,27 +338,34 @@ namespace DataContext.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Name_AR")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Picture")
                         .IsRequired()
                         .HasMaxLength(1000)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(1000)");
+                        .HasColumnType("nvarchar(1000)");
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int>("SellerId")
+                    b.Property<int?>("SellerId")
                         .HasColumnType("int")
                         .HasColumnName("Seller_id");
 
                     b.Property<string>("Shipping")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Shipping_AR")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");
@@ -429,36 +409,25 @@ namespace DataContext.Migrations
 
                     b.Property<string>("Address")
                         .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Gender")
                         .HasMaxLength(1)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(1)");
+                        .HasColumnType("nvarchar(1)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Phone")
                         .HasMaxLength(100)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<int?>("PostalCode")
                         .HasColumnType("int")
@@ -471,15 +440,29 @@ namespace DataContext.Migrations
 
             modelBuilder.Entity("Admin.Models.SellerContact", b =>
                 {
-                    b.Property<int>("ContactId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("Contact_id");
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasMaxLength(220)
+                        .HasColumnType("nvarchar(220)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("SellerId")
                         .HasColumnType("int")
                         .HasColumnName("Seller_id");
 
-                    b.HasKey("ContactId", "SellerId");
+                    b.HasKey("Id");
 
                     b.HasIndex("SellerId");
 
@@ -682,26 +665,6 @@ namespace DataContext.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Models.ProductImages", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<string>("ImgUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("prodId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("prodId");
-
-                    b.ToTable("ProductImages");
-                });
-
             modelBuilder.Entity("Admin.Models.Admins", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "adminProfile")
@@ -732,22 +695,12 @@ namespace DataContext.Migrations
 
             modelBuilder.Entity("Admin.Models.Category", b =>
                 {
-                    b.HasOne("Admin.Models.Category", "SuppCat")
-                        .WithMany("ParentId")
-                        .HasForeignKey("SuppCatId")
-                        .HasConstraintName("FK_Category_Category");
+                    b.HasOne("Admin.Models.Category", "parentCategory")
+                        .WithMany("subCategories")
+                        .HasForeignKey("parentId")
+                        .HasConstraintName("parentCatID");
 
-                    b.Navigation("SuppCat");
-                });
-
-            modelBuilder.Entity("Admin.Models.Contact", b =>
-                {
-                    b.HasOne("Admin.Models.Admins", "Admin")
-                        .WithMany("Contacts")
-                        .HasForeignKey("AdminId")
-                        .HasConstraintName("FK_Contact_Admin");
-
-                    b.Navigation("Admin");
+                    b.Navigation("parentCategory");
                 });
 
             modelBuilder.Entity("Admin.Models.Customer", b =>
@@ -768,19 +721,11 @@ namespace DataContext.Migrations
 
             modelBuilder.Entity("Admin.Models.CustomerContact", b =>
                 {
-                    b.HasOne("Admin.Models.Contact", "Contact")
-                        .WithMany("CustomerContacts")
-                        .HasForeignKey("ContactId")
-                        .HasConstraintName("FK_Customer_contacts_Contact")
-                        .IsRequired();
-
                     b.HasOne("Admin.Models.Customer", "Customer")
                         .WithMany("CustomerContacts")
                         .HasForeignKey("CustomerId")
                         .HasConstraintName("FK_Customer_contacts_Customer")
                         .IsRequired();
-
-                    b.Navigation("Contact");
 
                     b.Navigation("Customer");
                 });
@@ -838,8 +783,7 @@ namespace DataContext.Migrations
                     b.HasOne("Admin.Models.Seller", "Seller")
                         .WithMany("Products")
                         .HasForeignKey("SellerId")
-                        .HasConstraintName("FK_Product_Seller")
-                        .IsRequired();
+                        .HasConstraintName("FK_Product_Seller");
 
                     b.HasOne("Admin.Models.Category", "category")
                         .WithMany("Products")
@@ -873,19 +817,11 @@ namespace DataContext.Migrations
 
             modelBuilder.Entity("Admin.Models.SellerContact", b =>
                 {
-                    b.HasOne("Admin.Models.Contact", "Contact")
-                        .WithMany("SellerContacts")
-                        .HasForeignKey("ContactId")
-                        .HasConstraintName("FK_Seller_contacts_Contact")
-                        .IsRequired();
-
                     b.HasOne("Admin.Models.Seller", "Seller")
                         .WithMany("SellerContacts")
                         .HasForeignKey("SellerId")
                         .HasConstraintName("FK_Seller_contacts_Seller")
                         .IsRequired();
-
-                    b.Navigation("Contact");
 
                     b.Navigation("Seller");
                 });
@@ -941,22 +877,6 @@ namespace DataContext.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Models.ProductImages", b =>
-                {
-                    b.HasOne("Admin.Models.Product", "Product")
-                        .WithMany("ProductImages")
-                        .HasForeignKey("prodId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("Admin.Models.Admins", b =>
-                {
-                    b.Navigation("Contacts");
-                });
-
             modelBuilder.Entity("Admin.Models.Cart", b =>
                 {
                     b.Navigation("CartProducts");
@@ -966,16 +886,9 @@ namespace DataContext.Migrations
 
             modelBuilder.Entity("Admin.Models.Category", b =>
                 {
-                    b.Navigation("ParentId");
-
                     b.Navigation("Products");
-                });
 
-            modelBuilder.Entity("Admin.Models.Contact", b =>
-                {
-                    b.Navigation("CustomerContacts");
-
-                    b.Navigation("SellerContacts");
+                    b.Navigation("subCategories");
                 });
 
             modelBuilder.Entity("Admin.Models.Customer", b =>
@@ -1004,8 +917,6 @@ namespace DataContext.Migrations
                     b.Navigation("CustomerProductsRates");
 
                     b.Navigation("orderproduct");
-
-                    b.Navigation("ProductImages");
 
                     b.Navigation("ProductOptions");
                 });

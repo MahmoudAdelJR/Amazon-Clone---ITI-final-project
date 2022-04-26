@@ -45,6 +45,7 @@ namespace UserSide
             services.AddScoped<DbContext, AmazonContext>();
             services.AddScoped(typeof(IModelRepo<>), typeof(AdminRepo<>));
             services.AddScoped(typeof(IUnitofWork), typeof(UnitofWork));
+          //  services.AddScoped(typeof(CartRepository));
             // Identity
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<AmazonContext>().AddDefaultTokenProviders();

@@ -79,7 +79,6 @@ namespace UserSide.Controllers
                         Email = model.Email,
                         Name = model.FirstName,
                         PhoneNumber = model.PhoneNumber,
-                        Password = model.Password,
                         Gender = model.Gender,
                         City = model.City,
                         Street = model.Street,
@@ -109,6 +108,8 @@ namespace UserSide.Controllers
                 var authClaims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name,user.UserName),
+                    new Claim("Id", user.Id.ToString()),
+                    //new Claim("custID",user)
                     new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
                 };
                 foreach (var userrole in userRoles)

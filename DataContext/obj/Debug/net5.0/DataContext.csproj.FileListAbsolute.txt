@@ -88,24 +88,6 @@ F:\final project\MVC-Core-Project-master\DataContext\obj\Debug\net5.0\DataContex
 F:\final project\MVC-Core-Project-master\DataContext\obj\Debug\net5.0\ref\DataContext.dll
 F:\final project\MVC-Core-Project-master\DataContext\obj\Debug\net5.0\DataContext.pdb
 F:\final project\MVC-Core-Project-master\DataContext\obj\Debug\net5.0\DataContext.genruntimeconfig.cache
-F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\DataContext.deps.json
-F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\DataContext.runtimeconfig.json
-F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\DataContext.runtimeconfig.dev.json
-F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\DataContext.dll
-F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\ref\DataContext.dll
-F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\DataContext.pdb
-F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\Models.dll
-F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\Models.pdb
-F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.csproj.AssemblyReference.cache
-F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.GeneratedMSBuildEditorConfig.editorconfig
-F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.AssemblyInfoInputs.cache
-F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.AssemblyInfo.cs
-F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.csproj.CoreCompileInputs.cache
-F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.csproj.CopyComplete
-F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.dll
-F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\ref\DataContext.dll
-F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.pdb
-F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.genruntimeconfig.cache
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\1\Amazon-Clone---ITI-final-project\DataContext\bin\Debug\net5.0\DataContext.deps.json
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\1\Amazon-Clone---ITI-final-project\DataContext\bin\Debug\net5.0\DataContext.runtimeconfig.json
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\1\Amazon-Clone---ITI-final-project\DataContext\bin\Debug\net5.0\DataContext.runtimeconfig.dev.json
@@ -124,3 +106,21 @@ C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\1\Amazon-Clone---ITI-final-
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\1\Amazon-Clone---ITI-final-project\DataContext\obj\Debug\net5.0\ref\DataContext.dll
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\1\Amazon-Clone---ITI-final-project\DataContext\obj\Debug\net5.0\DataContext.pdb
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\1\Amazon-Clone---ITI-final-project\DataContext\obj\Debug\net5.0\DataContext.genruntimeconfig.cache
+F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\DataContext.deps.json
+F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\DataContext.runtimeconfig.json
+F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\DataContext.runtimeconfig.dev.json
+F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\DataContext.dll
+F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\ref\DataContext.dll
+F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\DataContext.pdb
+F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\Models.dll
+F:\final project\Amazon Clone - ITI final project\DataContext\bin\Debug\net5.0\Models.pdb
+F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.csproj.AssemblyReference.cache
+F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.GeneratedMSBuildEditorConfig.editorconfig
+F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.AssemblyInfoInputs.cache
+F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.AssemblyInfo.cs
+F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.csproj.CoreCompileInputs.cache
+F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.csproj.CopyComplete
+F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.dll
+F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\ref\DataContext.dll
+F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.pdb
+F:\final project\Amazon Clone - ITI final project\DataContext\obj\Debug\net5.0\DataContext.genruntimeconfig.cache

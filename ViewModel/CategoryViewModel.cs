@@ -10,9 +10,10 @@ namespace ViewModel
     public class CategoryViewModel
     {
         public string Name { get; set; }
+        public string Name_AR { get; set; }
         public string Description { get; set; }
+        public string Description_AR { get; set; }
         public string Picture { get; set; }
-        public int? ParentId { get; set; }
 
         public IQueryable<Category> categories { get; set; }
     }
@@ -27,7 +28,9 @@ namespace ViewModel
                 Name = cat.Name,
                 Description = cat.Description,
                 Picture = cat.Picture,
-                SuppCatId = cat.ParentId
+                parentId = null,
+                Name_AR = cat.Name_AR,
+                Description_AR = cat.Description_AR
             };
         }
 

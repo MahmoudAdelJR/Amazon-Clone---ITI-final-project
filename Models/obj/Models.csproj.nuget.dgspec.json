@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {}
+    "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj": {
+    "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
+        "projectUniqueName": "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\LeNoVo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last Github project\\1\\Amazon-Clone---ITI-final-project\\Models\\obj\\",
+        "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "F:\\final project\\Amazon Clone - ITI final project\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LeNoVo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

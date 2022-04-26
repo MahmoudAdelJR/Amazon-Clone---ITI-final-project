@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model List<SellerContact>
+
+<div class="main-container">
+    <div class="pd-ltr-20">
+
+        <div class="card-box mb-30">
+            <h2 class="h4 pd-20">Contacts</h2>
+            <table class="data-table table nowrap">
+                <thead>
+                    <tr>
+                        @*<th>Admin ID</th>*@
+                        <th>Phone</th>
+                        <th>Message</th>
+                        <th>Date</th>
+                        <th>Delete</th>
+                        <th class="datatable-nosort">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            @*<td>@item.AdminId</td>*@
+                            <td>@item.Phone</td>
+                            <td>@item.Message</td>
+                            <td>@item.Date</td>
+                            <td>
+                                <i class="fa-solid fa-trash-can">
+                                    @Html.ActionLink("Delete", "Delete", new { @Id = item.Id })
+                                </i>
+                            </td>
+
+                            <td>
+                                <div class="dropdown">
+                                    <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                        <i class="dw dw-more"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+
+                                        @Html.ActionLink("Create", "Create", null, new { @class = "dropdown-item" })
+                                        <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
+                                        <a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
+
+                                        <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="footer-wrap pd-20 mb-20 card-box">
+            DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
+        </div>
+    </div>
+</div>
+
+

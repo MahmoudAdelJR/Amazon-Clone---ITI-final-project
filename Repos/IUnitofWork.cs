@@ -16,6 +16,10 @@ namespace Repos
         IModelRepo<Seller> GetSellerRepo();
         IModelRepo<Order> GetOrderRepo();
         IModelRepo<Contact> GetContactRepo();
+        IModelRepo<SellerContact> GetSellerContactRepo();
+        IModelRepo<CustomerContact> GetCustomerContactRepo();
+        //IModelRepo<Cart> GetCartRepo();
+
         void Save();
     }
 }

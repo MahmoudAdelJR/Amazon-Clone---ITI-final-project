@@ -11,21 +11,33 @@ namespace Admin.Controllers
     public class ContactController : Controller
     {
         IUnitofWork unitofWork;
-        IModelRepo<Contact> ContactRepository;
+        IModelRepo<CustomerContact> customerContactRepository;
+        IModelRepo<SellerContact> sellerContactRepository;
         public ContactController(IUnitofWork _unitofWork)
         {
             unitofWork = _unitofWork;
-            ContactRepository = unitofWork.GetContactRepo();
+            customerContactRepository = unitofWork.GetCustomerContactRepo();
+            sellerContactRepository = unitofWork.GetSellerContactRepo();
         }
-        public IActionResult Index()
+        //public IActionResult Index()
+        //{
+        //    return View();// ContactRepository.Read().ToList());
+        //}
+        //public ActionResult Delete(int id)
+        //{
+        //    ContactRepository.Delete(id);
+        //    unitofWork.Save();
+        //    return RedirectToAction("index");
+        //}
+        [HttpGet]
+        public IActionResult getCustomerContacts()
         {
-            return View(ContactRepository.Read().ToList());
+            return View("customerContact", customerContactRepository.Read().ToList());
         }
-        public ActionResult Delete(int id)
+        [HttpGet]
+        public IActionResult getSellerContacts()
         {
-            ContactRepository.Delete(id);
-            unitofWork.Save();
-            return RedirectToAction("index");
+            return View("sellerContact", sellerContactRepository.Read().ToList());
         }
     }
 }

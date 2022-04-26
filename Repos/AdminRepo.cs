@@ -12,8 +12,8 @@ namespace Repos
 {
     public class AdminRepo<T> : IModelRepo<T> where T : BaseClass
     {
-        DbContext context;
-        DbSet<T> table;
+        protected DbContext context;
+        protected DbSet<T> table;
         public AdminRepo(DbContext _context)
         {
             context = _context;
@@ -51,7 +51,7 @@ namespace Repos
 
         public async Task<IQueryable<T>> FindByCondition(Expression<Func<T, bool>> expression)
         {
-            return table.Where(expression).AsNoTracking();
+            return  table.Where(expression).AsNoTracking();
         }
 
     }

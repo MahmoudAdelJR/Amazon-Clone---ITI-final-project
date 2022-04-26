@@ -66,7 +66,6 @@ namespace WebApplication7.Controllers
                             profileID = user.Id,
                             Name = model.Email,
                             Email = model.Email,
-                            Password = model.Password
                         });
                         unitofWork.Save();
                     }

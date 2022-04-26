@@ -22,7 +22,7 @@ namespace Admin.Data
         public virtual DbSet<Cart> Carts { get; set; }
         public virtual DbSet<CartProduct> CartProducts { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Contact> Contacts { get; set; }
+        //public virtual DbSet<Contact> Contacts { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<CustomerContact> CustomerContacts { get; set; }
         //public virtual DbSet<CustomerProduct> CustomerProducts { get; set; }
@@ -60,20 +60,14 @@ namespace Admin.Data
 
                 entity.Property(e => e.Email)
                     .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .HasMaxLength(100);
 
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .HasMaxLength(100);
 
                 entity.HasOne(d => d.adminProfile);
 
-                entity.Property(e => e.Password)
-                    .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
             });
             #endregion
 
@@ -122,53 +116,56 @@ namespace Admin.Data
                 entity.Property(e => e.Id);
 
                 entity.Property(e => e.Description)
-                    .HasMaxLength(220)
-                    .IsUnicode(false);
+                    .HasMaxLength(220);
+
+                entity.Property(e => e.Description_AR)
+                    .HasMaxLength(220);
 
                 entity.Property(e => e.Name)
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.Name_AR)
+                    .HasMaxLength(100);
 
                 entity.Property(e => e.Picture)
-                    .HasMaxLength(1000)
-                    .IsUnicode(false);
+                    .HasMaxLength(1000);
 
-                entity.Property(e => e.SuppCatId).HasColumnName("SuppCatID");
+                //entity.Property(e => e.parentId).HasColumnName("parentCatID");
 
-                entity.HasOne(d => d.SuppCat)
-                    .WithMany(p => p.ParentId)
-                    .HasForeignKey(d => d.SuppCatId)
-                    .HasConstraintName("FK_Category_Category");
+                entity.HasOne(d => d.parentCategory)
+                    .WithMany(p => p.subCategories)
+                    .HasForeignKey(d => d.parentId)
+                    .HasConstraintName("parentCatID");
             });
             #endregion
 
 
             #region Contact (reports)
-            modelBuilder.Entity<Contact>(entity =>
-            {
-                entity.ToTable("Contact");
+            //modelBuilder.Entity<Contact>(entity =>
+            //{
+            //    entity.ToTable("Contact");
 
-                entity.Property(e => e.Id);
+            //    entity.Property(e => e.Id);
 
-                entity.Property(e => e.AdminId).HasColumnName("Admin_id");
+            //    entity.Property(e => e.AdminId).HasColumnName("Admin_id");
 
-                entity.Property(e => e.Date).HasColumnType("datetime");
+            //    entity.Property(e => e.Date).HasColumnType("datetime");
 
-                entity.Property(e => e.Message)
-                    .IsRequired()
-                    .HasMaxLength(220)
-                    .IsUnicode(false);
+            //    entity.Property(e => e.Message)
+            //        .IsRequired()
+            //        .HasMaxLength(220)
+            //        .IsUnicode(false);
 
-                entity.Property(e => e.Phone)
-                    .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+            //    entity.Property(e => e.Phone)
+            //        .IsRequired()
+            //        .HasMaxLength(100)
+            //        .IsUnicode(false);
 
-                entity.HasOne(d => d.Admin)
-                    .WithMany(p => p.Contacts)
-                    .HasForeignKey(d => d.AdminId)
-                    .HasConstraintName("FK_Contact_Admin");
-            });
+            //    entity.HasOne(d => d.Admin)
+            //        .WithMany(p => p.Contacts)
+            //        .HasForeignKey(d => d.AdminId)
+            //        .HasConstraintName("FK_Contact_Admin");
+            //});
             #endregion
 
 
@@ -183,39 +180,27 @@ namespace Admin.Data
 
                 entity.Property(e => e.Email)
                     .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .HasMaxLength(100);
 
                 entity.Property(e => e.Gender)
-                    .HasMaxLength(1)
-                    .IsUnicode(false);
+                    .HasMaxLength(1);
 
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Password)
-                    .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .HasMaxLength(100);
 
                 entity.Property(e => e.PhoneNumber)
                     .HasMaxLength(50)
-                    .IsUnicode(false)
                     .HasColumnName("Phone_number");
 
                 entity.Property(e => e.PostalCode)
-                    .HasMaxLength(10)
-                    .IsUnicode(false);
+                    .HasMaxLength(10);
 
                 entity.Property(e => e.City)
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
+                    .HasMaxLength(20);
 
                 entity.Property(e => e.Street)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .HasMaxLength(50);
 
                 entity.HasOne(d => d.profile);
                 
@@ -231,19 +216,31 @@ namespace Admin.Data
             #region Customer Contact Relation ( Customer Report )
             modelBuilder.Entity<CustomerContact>(entity =>
             {
-                entity.HasKey(e => new { e.ContactId, e.CustomerId });
+                entity.Property(e => e.Id);
+
+                entity.Property(e => e.Date).HasColumnType("datetime");
+
+                entity.Property(e => e.Message)
+                    .IsRequired()
+                    .HasMaxLength(220);
+
+                entity.Property(e => e.Phone)
+                    .IsRequired()
+                    .HasMaxLength(100);
+
+                //entity.HasKey(e => new { e.ContactId, e.CustomerId });
 
                 entity.ToTable("Customer_contacts");
 
-                entity.Property(e => e.ContactId).HasColumnName("Contact_id");
+                //entity.Property(e => e.ContactId).HasColumnName("Contact_id");
 
                 entity.Property(e => e.CustomerId).HasColumnName("Customer_id");
 
-                entity.HasOne(d => d.Contact)
-                    .WithMany(p => p.CustomerContacts)
-                    .HasForeignKey(d => d.ContactId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Customer_contacts_Contact");
+                //entity.HasOne(d => d.Contact)
+                //    .WithMany(p => p.CustomerContacts)
+                //    .HasForeignKey(d => d.ContactId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_Customer_contacts_Contact");
 
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.CustomerContacts)
@@ -369,7 +366,7 @@ namespace Admin.Data
 
                 entity.Property(e => e.OptionName)
                     .HasMaxLength(50)
-                    .IsUnicode(false)
+                    //.IsUnicode(false)
                     .HasColumnName("option_name");
             });
             #endregion
@@ -391,7 +388,6 @@ namespace Admin.Data
 
                 entity.Property(e => e.OrderAddress)
                     .HasMaxLength(100)
-                    .IsUnicode(false)
                     .HasColumnName("Order_address");
 
                 entity.Property(e => e.OrderDate)
@@ -439,30 +435,41 @@ namespace Admin.Data
 
                 entity.Property(e => e.Brand)
                     .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.Brand_AR)
+                    .IsRequired()
+                    .HasMaxLength(100);
 
                 entity.Property(e => e.Description)
                     .IsRequired()
-                    .HasMaxLength(5000)
-                    .IsUnicode(false);
+                    .HasMaxLength(5000);
+
+                entity.Property(e => e.Description_AR)
+                    .IsRequired()
+                    .HasMaxLength(5000);
 
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.Name_AR)
+                    .IsRequired()
+                    .HasMaxLength(100);
 
                 entity.Property(e => e.Picture)
                     .IsRequired()
-                    .HasMaxLength(1000)
-                    .IsUnicode(false);
+                    .HasMaxLength(1000);
 
                 entity.Property(e => e.SellerId).HasColumnName("Seller_id");
 
                 entity.Property(e => e.Shipping)
                     .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Shipping_AR)
+                    .IsRequired()
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.categoryId).HasColumnName("category_id");
 
@@ -515,31 +522,21 @@ namespace Admin.Data
                 entity.Property(e => e.Id);
 
                 entity.Property(e => e.Address)
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .HasMaxLength(100);
 
                 entity.Property(e => e.Email)
                     .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .HasMaxLength(100);
 
                 entity.Property(e => e.Gender)
-                    .HasMaxLength(1)
-                    .IsUnicode(false);
+                    .HasMaxLength(1);
 
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Password)
-                    .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .HasMaxLength(100);
 
                 entity.Property(e => e.Phone)
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .HasMaxLength(100);
 
                 entity.Property(e => e.PostalCode).HasColumnName("Postal_Code");
             });
@@ -549,19 +546,32 @@ namespace Admin.Data
             #region SellerContact
             modelBuilder.Entity<SellerContact>(entity =>
             {
-                entity.HasKey(e => new { e.ContactId, e.SellerId });
+
+                entity.Property(e => e.Id);
+
+                entity.Property(e => e.Date).HasColumnType("datetime");
+
+                entity.Property(e => e.Message)
+                    .IsRequired()
+                    .HasMaxLength(220);
+
+                entity.Property(e => e.Phone)
+                    .IsRequired()
+                    .HasMaxLength(100);
+
+                //entity.HasKey(e => new { e.ContactId, e.SellerId });
 
                 entity.ToTable("Seller_contacts");
 
-                entity.Property(e => e.ContactId).HasColumnName("Contact_id");
+                //entity.Property(e => e.ContactId).HasColumnName("Contact_id");
 
                 entity.Property(e => e.SellerId).HasColumnName("Seller_id");
 
-                entity.HasOne(d => d.Contact)
-                    .WithMany(p => p.SellerContacts)
-                    .HasForeignKey(d => d.ContactId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Seller_contacts_Contact");
+                //entity.HasOne(d => d.Contact)
+                //    .WithMany(p => p.SellerContacts)
+                //    .HasForeignKey(d => d.ContactId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_Seller_contacts_Contact");
 
                 entity.HasOne(d => d.Seller)
                     .WithMany(p => p.SellerContacts)

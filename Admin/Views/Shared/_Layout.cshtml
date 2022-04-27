@@ -1,4 +1,12 @@
 ﻿
+
+
+
+
+
+
+
+
 @using Microsoft.AspNetCore.Identity;
 
 @inject SignInManager<IdentityUser> signInManager
@@ -49,10 +57,26 @@
 
     <div class="header">
         <div class="header-left">
-            
+            <div class="menu-icon dw dw-menu"></div>
+            <div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
+
         </div>
         <div class="header-right">
-
+            <div class="dashboard-setting user-notification">
+                <div class="dropdown">
+                    <a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+                        <i class="dw dw-settings2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="user-notification">
+                <div class="dropdown">
+                    <a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
+                        <i class="icon-copy dw dw-notification"></i>
+                        <span class="badge notification-active"></span>
+                    </a>
+                </div>
+            </div>
             <div class="user-info-dropdown">
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
@@ -63,8 +87,8 @@
                         {
                             <span class="user-name">@User.Identity.Name</span>
                         }
-
                     </a>
+
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                         <a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
                         <a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i> Setting</a>
@@ -73,9 +97,14 @@
                             <button type="submit" value="Sign Out" style="width: auto; color:gray; background-color: transparent;border:none" class="btn btn-primary"><i class="dw dw-logout"></i> Log Out</button>
                         </form>
                     </div>
+
+
+
                 </div>
             </div>
-
+            <div class="github-link">
+                <a href="https://github.com/OmarAhmed11" target="_blank"><img src="vendors/images/github.svg" alt=""></a>
+            </div>
         </div>
     </div>
 
@@ -209,13 +238,13 @@
                             <li><a href="~/Order/Index">Show All Order</a></li>
                         </ul>
                     </li>
-
                 </ul>
             </div>
         </div>
     </div>
-
     <div class="mobile-menu-overlay"></div>
+
+
 
     @RenderBody()
 
@@ -266,7 +295,7 @@
         else {
             console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
         }
-            // ]]>
+                    // ]]>
     </script>
 </body>
 </html>

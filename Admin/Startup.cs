@@ -70,11 +70,11 @@ namespace Admin
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-            Path.Combine(env.ContentRootPath, "wwwroot/pics"))
-            });
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    FileProvider = new PhysicalFileProvider(
+            //Path.Combine(env.ContentRootPath, "wwwroot/pics"))
+            //});
             app.UseRouting();
             app.UseAuthentication();
 

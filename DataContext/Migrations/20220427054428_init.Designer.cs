@@ -4,14 +4,16 @@ using Admin.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataContext.Migrations
 {
     [DbContext(typeof(AmazonContext))]
-    partial class AmazonContextModelSnapshot : ModelSnapshot
+    [Migration("20220427054428_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -229,61 +231,11 @@ namespace DataContext.Migrations
                     b.ToTable("Customer_Products_Rates");
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Admin.Models.Filter", b =>
-=======
             modelBuilder.Entity("Admin.Models.Option", b =>
->>>>>>> e5edb51e269cbd5b4e08840dbec6ca54c9dd03f2
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-<<<<<<< HEAD
-                        .UseIdentityColumn();
-
-                    b.Property<string>("display_text")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("slug")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("slug")
-                        .IsUnique()
-                        .HasFilter("[slug] IS NOT NULL");
-
-                    b.ToTable("Filter");
-                });
-
-            modelBuilder.Entity("Admin.Models.FilterOption", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<string>("display_text")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<int>("filter_id")
-                        .HasColumnType("int");
-
-                    b.Property<int>("sort")
-                        .HasColumnType("int");
-
-                    b.Property<string>("url_slug")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("filter_id");
-
-                    b.ToTable("FilterOptions");
-=======
                         .HasColumnName("id")
                         .UseIdentityColumn();
 
@@ -295,7 +247,6 @@ namespace DataContext.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("options");
->>>>>>> e5edb51e269cbd5b4e08840dbec6ca54c9dd03f2
                 });
 
             modelBuilder.Entity("Admin.Models.Order", b =>
@@ -346,11 +297,7 @@ namespace DataContext.Migrations
                         .HasColumnType("int")
                         .HasColumnName("Product_id");
 
-<<<<<<< HEAD
-                    b.Property<int>("Quantity")
-=======
                     b.Property<int?>("Quantity")
->>>>>>> e5edb51e269cbd5b4e08840dbec6ca54c9dd03f2
                         .HasColumnType("int");
 
                     b.HasKey("OrderId", "ProductId");
@@ -438,8 +385,6 @@ namespace DataContext.Migrations
                     b.ToTable("Product");
                 });
 
-<<<<<<< HEAD
-=======
             modelBuilder.Entity("Admin.Models.ProductOption", b =>
                 {
                     b.Property<int>("ProductId")
@@ -457,7 +402,6 @@ namespace DataContext.Migrations
                     b.ToTable("product_options");
                 });
 
->>>>>>> e5edb51e269cbd5b4e08840dbec6ca54c9dd03f2
             modelBuilder.Entity("Admin.Models.Seller", b =>
                 {
                     b.Property<int>("Id")
@@ -723,46 +667,6 @@ namespace DataContext.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Models.Filter_Options_Products", b =>
-                {
-                    b.Property<int>("filter_option_id")
-                        .HasColumnType("int")
-                        .HasColumnName("filter_option_id");
-
-                    b.Property<int>("product_id")
-                        .HasColumnType("int")
-                        .HasColumnName("product_id");
-
-                    b.HasKey("filter_option_id", "product_id");
-
-                    b.HasIndex("product_id");
-
-                    b.ToTable("Filter_Options_Products");
-                });
-
-            modelBuilder.Entity("Models.Filters_Categories", b =>
-                {
-                    b.Property<int>("category_id")
-                        .HasColumnType("int")
-                        .HasColumnName("category_id");
-
-                    b.Property<int>("filter_id")
-                        .HasColumnType("int")
-                        .HasColumnName("filter_id");
-
-                    b.Property<int>("sort")
-                        .HasColumnType("int");
-
-                    b.HasKey("category_id", "filter_id");
-
-                    b.HasIndex("filter_id");
-
-                    b.ToTable("Filters_Categories");
-                });
-
-=======
->>>>>>> e5edb51e269cbd5b4e08840dbec6ca54c9dd03f2
             modelBuilder.Entity("Admin.Models.Admins", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "adminProfile")
@@ -847,20 +751,6 @@ namespace DataContext.Migrations
                     b.Navigation("Product");
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Admin.Models.FilterOption", b =>
-                {
-                    b.HasOne("Admin.Models.Filter", "filter")
-                        .WithMany("FilterOptions")
-                        .HasForeignKey("filter_id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("filter");
-                });
-
-=======
->>>>>>> e5edb51e269cbd5b4e08840dbec6ca54c9dd03f2
             modelBuilder.Entity("Admin.Models.Order", b =>
                 {
                     b.HasOne("Admin.Models.Customer", "Customer")
@@ -908,8 +798,6 @@ namespace DataContext.Migrations
                     b.Navigation("Seller");
                 });
 
-<<<<<<< HEAD
-=======
             modelBuilder.Entity("Admin.Models.ProductOption", b =>
                 {
                     b.HasOne("Admin.Models.Option", "Option")
@@ -929,7 +817,6 @@ namespace DataContext.Migrations
                     b.Navigation("Product");
                 });
 
->>>>>>> e5edb51e269cbd5b4e08840dbec6ca54c9dd03f2
             modelBuilder.Entity("Admin.Models.SellerContact", b =>
                 {
                     b.HasOne("Admin.Models.Seller", "Seller")
@@ -992,47 +879,6 @@ namespace DataContext.Migrations
                         .IsRequired();
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Models.Filter_Options_Products", b =>
-                {
-                    b.HasOne("Admin.Models.FilterOption", "option")
-                        .WithMany("Filter_Options_Products")
-                        .HasForeignKey("filter_option_id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Admin.Models.Product", "product")
-                        .WithMany("Filter_Options_Products")
-                        .HasForeignKey("product_id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("option");
-
-                    b.Navigation("product");
-                });
-
-            modelBuilder.Entity("Models.Filters_Categories", b =>
-                {
-                    b.HasOne("Admin.Models.Category", "category")
-                        .WithMany("Filter_categories")
-                        .HasForeignKey("category_id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Admin.Models.Filter", "filter")
-                        .WithMany("Filter_categories")
-                        .HasForeignKey("filter_id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("category");
-
-                    b.Navigation("filter");
-                });
-
-=======
->>>>>>> e5edb51e269cbd5b4e08840dbec6ca54c9dd03f2
             modelBuilder.Entity("Admin.Models.Cart", b =>
                 {
                     b.Navigation("CartProducts");
@@ -1042,11 +888,6 @@ namespace DataContext.Migrations
 
             modelBuilder.Entity("Admin.Models.Category", b =>
                 {
-<<<<<<< HEAD
-                    b.Navigation("Filter_categories");
-
-=======
->>>>>>> e5edb51e269cbd5b4e08840dbec6ca54c9dd03f2
                     b.Navigation("Products");
 
                     b.Navigation("subCategories");
@@ -1061,22 +902,9 @@ namespace DataContext.Migrations
                     b.Navigation("Orders");
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Admin.Models.Filter", b =>
-                {
-                    b.Navigation("Filter_categories");
-
-                    b.Navigation("FilterOptions");
-                });
-
-            modelBuilder.Entity("Admin.Models.FilterOption", b =>
-                {
-                    b.Navigation("Filter_Options_Products");
-=======
             modelBuilder.Entity("Admin.Models.Option", b =>
                 {
                     b.Navigation("ProductOptions");
->>>>>>> e5edb51e269cbd5b4e08840dbec6ca54c9dd03f2
                 });
 
             modelBuilder.Entity("Admin.Models.Order", b =>
@@ -1090,15 +918,9 @@ namespace DataContext.Migrations
 
                     b.Navigation("CustomerProductsRates");
 
-<<<<<<< HEAD
-                    b.Navigation("Filter_Options_Products");
-
-                    b.Navigation("orderproduct");
-=======
                     b.Navigation("orderproduct");
 
                     b.Navigation("ProductOptions");
->>>>>>> e5edb51e269cbd5b4e08840dbec6ca54c9dd03f2
                 });
 
             modelBuilder.Entity("Admin.Models.Seller", b =>

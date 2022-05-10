@@ -36,10 +36,10 @@ namespace UserSide.Controllers
         [Route("ProductByCatID")]
         public async Task<IQueryable<Product>> GetPrdByCatID(int CatID, string brand)
         {
-            var result = await productrepo.FindByCondition(i => i.categoryId == CatID );
+            var result = await productrepo.FindByCondition(i => i.categoryId == CatID);
             return result;
         }
-        
+
 
 
         // Search for product by name

@@ -1,6 +1,8 @@
 ﻿using Admin.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Models.AuthenticationClasses;
 using Repos;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +30,16 @@ namespace UserSide.Controllers
             unitofWork.Save();
             return Ok();
         }
+        [HttpGet]
+        [Authorize(Roles = UserRoles.Customer)]
+        [Route("profile")]
+        public IActionResult Profile()
+        {
+            var userId = User.Claims.FirstOrDefault(c => c.Type == "Id").Value;
+            var profile = ModelRepository.Read().Where(c => c.profileID == userId).FirstOrDefault();
+            return Ok(profile);
+        }
+
         // GET: api/<CustomerController>
         [HttpGet]
         public ActionResult<IEnumerable<Customer>> Get()

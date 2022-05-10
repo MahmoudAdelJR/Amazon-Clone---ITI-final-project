@@ -15,6 +15,6 @@ namespace Admin.Models
         public int ProductId { get; set; }
         public virtual Product products { get; set; }
         public virtual Order orders { get; set; }
-        public int? Quantity { get; set; }
+        public int Quantity { get; set; }
     }
 }

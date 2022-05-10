@@ -29,12 +29,14 @@ namespace Admin.Data
         public virtual DbSet<CustomerProductsRate> CustomerProductsRates { get; set; }
         //public virtual DbSet<List> Lists { get; set; }
         //public virtual DbSet<ListProduct> ListProducts { get; set; }
-        public virtual DbSet<Option> Options { get; set; }
+       // public virtual DbSet<Filter> Options { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderProduct> OrderProducts { get; set; }
         public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<ProductOption> ProductOptions { get; set; }
-
+        public virtual DbSet<FilterOption> filterOptions { get; set; }
+        public virtual DbSet<Filter> filters { get; set; }
+        public virtual DbSet<Filter_Options_Products> filterOptionsProducts { get; set; }
+        public virtual DbSet<Filters_Categories> filtersCategories { get; set; }
         public virtual DbSet<Seller> Sellers { get; set; }
         public virtual DbSet<SellerContact> SellerContacts { get; set; }
 
@@ -309,6 +311,81 @@ namespace Admin.Data
             #endregion
 
 
+            #region Filters
+            modelBuilder.Entity<Filter>(entity =>
+            {
+                entity.ToTable("Filter");
+                entity.HasIndex(e => e.slug).IsUnique();
+                entity.Property(e => e.Id);
+                entity.Property(e => e.display_text)
+                    .HasMaxLength(100);
+            });
+            #endregion
+
+
+            #region FilterOptions
+            modelBuilder.Entity<FilterOption>(entity =>
+            {
+                entity.ToTable("FilterOptions");
+
+                entity.Property(e => e.Id);
+                entity.Property(e => e.display_text)
+                    .HasMaxLength(100);
+                entity.Property(e => e.url_slug).HasMaxLength(100);
+
+                entity.HasOne(d => d.filter)
+                .WithMany(p => p.FilterOptions)
+                .HasForeignKey(d => d.filter_id);
+            });
+            #endregion
+
+            #region filter options products
+            modelBuilder.Entity<Filter_Options_Products>(entity =>
+            {
+                entity.HasKey(e => new { e.filter_option_id, e.product_id });
+
+                entity.ToTable("Filter_Options_Products");
+
+                entity.Property(e => e.filter_option_id).HasColumnName("filter_option_id");
+
+                entity.Property(e => e.product_id).HasColumnName("product_id");
+
+                entity.HasOne(d => d.option)
+                    .WithMany(p => p.Filter_Options_Products)
+                    .HasForeignKey(d => d.filter_option_id);
+
+                entity.HasOne(d => d.product)
+                    .WithMany(p => p.Filter_Options_Products)
+                    .HasForeignKey(d => d.product_id);
+
+            });
+            #endregion
+
+
+            #region filters categories
+            modelBuilder.Entity<Filters_Categories>(entity =>
+            {
+                entity.HasKey(e => new { e.category_id, e.filter_id });
+
+                entity.ToTable("Filters_Categories");
+
+                entity.Property(e => e.category_id).HasColumnName("category_id");
+
+                entity.Property(e => e.filter_id).HasColumnName("filter_id");
+                
+
+                entity.HasOne(d => d.category)
+                    .WithMany(p => p.Filter_categories)
+                    .HasForeignKey(d => d.category_id);
+
+                entity.HasOne(d => d.filter)
+                    .WithMany(p => p.Filter_categories)
+                    .HasForeignKey(d => d.filter_id);
+
+            });
+            #endregion
+
+
             #region List 
             //modelBuilder.Entity<List>(entity =>
             //{
@@ -357,18 +434,18 @@ namespace Admin.Data
 
 
             #region Option
-            modelBuilder.Entity<Option>(entity =>
-            {
-                entity.ToTable("options");
+            //modelBuilder.Entity<Filter>(entity =>
+            //{
+            //    entity.ToTable("options");
 
-                entity.Property(e => e.Id)
-                    .HasColumnName("id");
+            //    entity.Property(e => e.Id)
+            //        .HasColumnName("id");
 
-                entity.Property(e => e.OptionName)
-                    .HasMaxLength(50)
-                    //.IsUnicode(false)
-                    .HasColumnName("option_name");
-            });
+            //    entity.Property(e => e.OptionName)
+            //        .HasMaxLength(50)
+            //        //.IsUnicode(false)
+            //        .HasColumnName("option_name");
+            //});
             #endregion
 
 
@@ -489,28 +566,28 @@ namespace Admin.Data
 
 
             #region ProductOption
-            modelBuilder.Entity<ProductOption>(entity =>
-            {
-                entity.HasKey(e => new { e.ProductId, e.OptionId });
+            //modelBuilder.Entity<ProductOption>(entity =>
+            //{
+            //    entity.HasKey(e => new { e.ProductId, e.OptionId });
 
-                entity.ToTable("product_options");
+            //    entity.ToTable("product_options");
 
-                entity.Property(e => e.ProductId).HasColumnName("product_id");
+            //    entity.Property(e => e.ProductId).HasColumnName("product_id");
 
-                entity.Property(e => e.OptionId).HasColumnName("option_id");
+            //    entity.Property(e => e.OptionId).HasColumnName("option_id");
 
-                entity.HasOne(d => d.Option)
-                    .WithMany(p => p.ProductOptions)
-                    .HasForeignKey(d => d.OptionId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_product_options_options");
+            //    entity.HasOne(d => d.Option)
+            //        .WithMany(p => p.ProductOptions)
+            //        .HasForeignKey(d => d.OptionId)
+            //        .OnDelete(DeleteBehavior.ClientSetNull)
+            //        .HasConstraintName("FK_product_options_options");
 
-                entity.HasOne(d => d.Product)
-                    .WithMany(p => p.ProductOptions)
-                    .HasForeignKey(d => d.ProductId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_product_options_Product");
-            });
+            //    entity.HasOne(d => d.Product)
+            //        .WithMany(p => p.ProductOptions)
+            //        .HasForeignKey(d => d.ProductId)
+            //        .OnDelete(DeleteBehavior.ClientSetNull)
+            //        .HasConstraintName("FK_product_options_Product");
+            //});
             #endregion
 
 

@@ -1,6 +1,8 @@
 ﻿using Admin.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +15,7 @@ namespace ViewModel
         public double? Discount { get; set; }
         public string Shipping { get; set; }
         public int Price { get; set; }
-        public string Picture { get; set; }
+        public IFormFile Picture { get; set; }
         public int Stock { get; set; }
         public string Brand { get; set; }
         public string Description { get; set; }
@@ -29,19 +31,34 @@ namespace ViewModel
 
         public static Product ToModel(this ProductVM PVM)
         {
-            return new Product
+            var prd = new Product
             {
                 Name = PVM.Name,
+                Name_AR =  PVM.Name,
+                Shipping_AR = PVM.Shipping,
+                Description_AR = PVM.Description,
+                Brand_AR = PVM.Brand,
                 Discount = PVM.Discount,
                 Shipping = PVM.Shipping,
                 Price = PVM.Price,
-                Picture = PVM.Picture,
                 Stock = PVM.Stock,
                 Brand = PVM.Brand,
                 Description = PVM.Description,
                 categoryId = PVM.categoryId,
-                SellerId = PVM.SellerId
+                //SellerId = PVM.SellerId
             };
+
+            if (PVM.Picture != null)
+            {
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/pics");
+                var uniqueFileName = Guid.NewGuid().ToString() + "_" + PVM.Picture.FileName;
+                using (var stream = new FileStream(Path.Combine(filePath, uniqueFileName), FileMode.Create))
+                {
+                    PVM.Picture.CopyTo(stream);
+                }
+                prd.Picture = uniqueFileName;
+            }
+            return prd;
         }
 
         //public static ProductVM ToViewModel(this Product PVM)

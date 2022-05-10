@@ -1,14 +1,17 @@
 ﻿using Admin.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Models.AuthenticationClasses;
+using Newtonsoft.Json;
 using Repos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ViewModel;
-
 namespace Admin.Controllers
 {
+    [Authorize(Roles = UserRoles.Admin)]
     public class SubCategoryController : Controller
     {
         IUnitofWork unitofWork;

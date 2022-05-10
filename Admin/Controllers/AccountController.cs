@@ -1,4 +1,5 @@
 ﻿using Admin.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -14,6 +15,7 @@ using ViewModel;
 
 namespace WebApplication7.Controllers
 {
+    
     public class AccountController : Controller
     {
         private readonly UserManager<IdentityUser> userManager;
@@ -32,11 +34,12 @@ namespace WebApplication7.Controllers
             unitofWork = _unitofWork;
             ModelRepository = unitofWork.GetAdminRepo();
         }
+        [Authorize(Roles = UserRoles.Admin)]
         public IActionResult Registration()
         {
             return View();
         }
-
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpPost]
         public async Task<IActionResult> Registration(RegistrationVM model)
         {

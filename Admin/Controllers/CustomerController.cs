@@ -3,6 +3,7 @@ using Admin.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Models.AuthenticationClasses;
 using Repos;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Admin.Controllers
 {
-    [Authorize]
+    [Authorize(Roles =UserRoles.Admin)]
     public class CustomerController : Controller
     {
 

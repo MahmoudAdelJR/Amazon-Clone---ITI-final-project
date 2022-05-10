@@ -17,6 +17,7 @@ C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.pdb
 F:\final project\Amazon Clone - ITI final project\Repos\bin\Debug\net5.0\Repos.deps.json
 F:\final project\Amazon Clone - ITI final project\Repos\bin\Debug\net5.0\Repos.dll
+F:\final project\Amazon Clone - ITI final project\Repos\bin\Debug\net5.0\ref\Repos.dll
 F:\final project\Amazon Clone - ITI final project\Repos\bin\Debug\net5.0\Repos.pdb
 F:\final project\Amazon Clone - ITI final project\Repos\bin\Debug\net5.0\DataContext.dll
 F:\final project\Amazon Clone - ITI final project\Repos\bin\Debug\net5.0\Models.dll
@@ -31,4 +32,3 @@ F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.c
 F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.dll
 F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\ref\Repos.dll
 F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.pdb
-F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\refint\Repos.dll

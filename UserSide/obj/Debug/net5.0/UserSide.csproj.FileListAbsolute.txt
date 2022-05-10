@@ -142,19 +142,8 @@ C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\UserSide\obj\Debug\net5.0\ref\UserSide.dll
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\UserSide\obj\Debug\net5.0\UserSide.pdb
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\UserSide\obj\Debug\net5.0\UserSide.genruntimeconfig.cache
-F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.csproj.AssemblyReference.cache
-F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.GeneratedMSBuildEditorConfig.editorconfig
-F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.AssemblyInfoInputs.cache
-F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.AssemblyInfo.cs
-F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.csproj.CoreCompileInputs.cache
-F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.MvcApplicationPartsAssemblyInfo.cs
-F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.MvcApplicationPartsAssemblyInfo.cache
-F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.dll
-F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\ref\UserSide.dll
-F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.pdb
 F:\final project\Amazon Clone - ITI final project\UserSide\bin\Debug\net5.0\appsettings.Development.json
 F:\final project\Amazon Clone - ITI final project\UserSide\bin\Debug\net5.0\appsettings.json
-F:\final project\Amazon Clone - ITI final project\UserSide\bin\Debug\net5.0\UserSide.StaticWebAssets.xml
 F:\final project\Amazon Clone - ITI final project\UserSide\bin\Debug\net5.0\UserSide.exe
 F:\final project\Amazon Clone - ITI final project\UserSide\bin\Debug\net5.0\UserSide.deps.json
 F:\final project\Amazon Clone - ITI final project\UserSide\bin\Debug\net5.0\UserSide.runtimeconfig.json
@@ -281,8 +270,22 @@ F:\final project\Amazon Clone - ITI final project\UserSide\bin\Debug\net5.0\Repo
 F:\final project\Amazon Clone - ITI final project\UserSide\bin\Debug\net5.0\DataContext.pdb
 F:\final project\Amazon Clone - ITI final project\UserSide\bin\Debug\net5.0\Models.pdb
 F:\final project\Amazon Clone - ITI final project\UserSide\bin\Debug\net5.0\Repos.pdb
+F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.csproj.AssemblyReference.cache
+F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.GeneratedMSBuildEditorConfig.editorconfig
+F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.AssemblyInfoInputs.cache
+F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.AssemblyInfo.cs
+F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.csproj.CoreCompileInputs.cache
+F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.MvcApplicationPartsAssemblyInfo.cs
+F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.MvcApplicationPartsAssemblyInfo.cache
 F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\scopedcss\bundle\UserSide.styles.css
 F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\staticwebassets\UserSide.StaticWebAssets.Manifest.cache
 F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.RazorTargetAssemblyInfo.cache
 F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.csproj.CopyComplete
+F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.dll
+F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\ref\UserSide.dll
+F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.pdb
 F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\UserSide.genruntimeconfig.cache
+F:\final project\Amazon Clone - ITI final project\UserSide\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+F:\final project\Amazon Clone - ITI final project\UserSide\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+F:\final project\Amazon Clone - ITI final project\UserSide\bin\Debug\net5.0\System.IO.Pipelines.dll
+F:\final project\Amazon Clone - ITI final project\UserSide\obj\Debug\net5.0\staticwebassets\UserSide.StaticWebAssets.xml

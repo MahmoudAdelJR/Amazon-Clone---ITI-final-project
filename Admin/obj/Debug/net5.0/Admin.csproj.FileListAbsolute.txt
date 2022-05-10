@@ -173,30 +173,18 @@ C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Admin\obj\Debug\net5.0\Razor\Views\Customer\Details.cshtml.g.cs
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Admin\obj\Debug\net5.0\Razor\Views\Order\Details.cshtml.g.cs
 C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Admin\obj\Debug\net5.0\Razor\Views\Product\Details.cshtml.g.cs
-F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.csproj.AssemblyReference.cache
-F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.GeneratedMSBuildEditorConfig.editorconfig
-F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.AssemblyInfoInputs.cache
-F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.AssemblyInfo.cs
-F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.csproj.CoreCompileInputs.cache
-F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.MvcApplicationPartsAssemblyInfo.cache
-F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.RazorAssemblyInfo.cache
-F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.RazorAssemblyInfo.cs
-F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.dll
-F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\ref\Admin.dll
-F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.pdb
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\appsettings.Development.json
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\appsettings.json
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\bundleconfig.json
-F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Admin.StaticWebAssets.xml
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Admin.exe
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Admin.deps.json
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Admin.runtimeconfig.json
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Admin.runtimeconfig.dev.json
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Admin.dll
+F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\ref\Admin.dll
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Admin.pdb
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Admin.Views.dll
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Admin.Views.pdb
-F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Dropbox.Api.dll
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Humanizer.dll
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
@@ -311,6 +299,14 @@ F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\DataCon
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Repos.pdb
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\ViewModel.pdb
 F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Models.pdb
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.csproj.AssemblyReference.cache
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.GeneratedMSBuildEditorConfig.editorconfig
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.AssemblyInfoInputs.cache
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.AssemblyInfo.cs
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.csproj.CoreCompileInputs.cache
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.MvcApplicationPartsAssemblyInfo.cache
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.RazorAssemblyInfo.cache
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.RazorAssemblyInfo.cs
 F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\scopedcss\bundle\Admin.styles.css
 F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\staticwebassets\Admin.StaticWebAssets.Manifest.cache
 F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.TagHelpers.input.cache
@@ -352,5 +348,12 @@ F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.R
 F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.RazorTargetAssemblyInfo.cs
 F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.Views.pdb
 F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.csproj.CopyComplete
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.dll
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\ref\Admin.dll
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.pdb
 F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\Admin.genruntimeconfig.cache
-F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\refint\Admin.dll
+F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\System.IO.Pipelines.dll
+F:\final project\Amazon Clone - ITI final project\Admin\obj\Debug\net5.0\staticwebassets\Admin.StaticWebAssets.xml
+F:\final project\Amazon Clone - ITI final project\Admin\bin\Debug\net5.0\Json.Net.dll

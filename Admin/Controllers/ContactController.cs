@@ -1,5 +1,7 @@
 ﻿using Admin.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Models.AuthenticationClasses;
 using Repos;
 using System;
 using System.Collections.Generic;
@@ -8,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Admin.Controllers
 {
+    [Authorize(Roles =UserRoles.Admin)]
     public class ContactController : Controller
     {
         IUnitofWork unitofWork;
@@ -19,16 +22,7 @@ namespace Admin.Controllers
             customerContactRepository = unitofWork.GetCustomerContactRepo();
             sellerContactRepository = unitofWork.GetSellerContactRepo();
         }
-        //public IActionResult Index()
-        //{
-        //    return View();// ContactRepository.Read().ToList());
-        //}
-        //public ActionResult Delete(int id)
-        //{
-        //    ContactRepository.Delete(id);
-        //    unitofWork.Save();
-        //    return RedirectToAction("index");
-        //}
+        
         [HttpGet]
         public IActionResult getCustomerContacts()
         {

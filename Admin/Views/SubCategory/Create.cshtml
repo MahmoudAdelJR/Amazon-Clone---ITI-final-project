@@ -1,12 +1,108 @@
 ﻿
 @using ViewModel
-
+@using Newtonsoft.Json;
 @model SubCategoryViewModel
+@{
+    var settings = new Newtonsoft.Json.JsonSerializerSettings();
+    // This tells your serializer that multiple references are okay.
+    settings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+ }
 
+<script type="text/javascript">
+    var test =@Html.Raw( @JsonConvert.SerializeObject(Model.categories.ToList(),settings));
+  //  console.log(test);
+
+    function handleSubmit(event) {
+        //console.log(frm);
+        event.preventDefault()
+        var hidden = document.getElementById("ParentId");
+        //var formData = new FormData(formElement);
+        //formData.forEach((i) => console.log(i));
+        //alert(frm["ParentId"]);
+        //const data = new FormData(frm);
+        //const value = data.get('email');
+        var navs = document.getElementById("navs");
+        hidden.value = navs.lastChild.id;
+        console.log(event.target);
+        event.target.submit();
+        //const l = document.getElementById("ParentId");
+        //alert(navs.lastChild.id);
+        //alert("test");
+        //alert(data.get("ParentId"));
+        //data.set("ParentId", navs.lastChild.id)
+        //frm["ParentId"].value = navs.lastChild.id;
+        //data.append("ParentId", navs.lastChild.id);
+        //console.log(data);
+        //l.value = navs.lastElementChild.id;
+    }
+    //alert(test[1].Id);
+    function myfunction(id)
+    {
+        //alert(id);
+      //  console.log(id);
+        var navs = document.getElementById("navs");
+        
+        const l = document.getElementById("ParentId");
+        const list = document.createElement("select");
+        list.innerHTML+=`<option disabled>Select</option>`
+        list.onchange = ()=>myfunction(list.value);
+        //list.addEventListener("change", myfunction(this.value));
+        var filtered = test.filter(c => c.parentId == id);
+        if (filtered.length < 1) {
+            if (test.find(i => i.Id == navs.lastElementChild.id)) {
+                // alert("test");
+                if (test.find(i => i.Id == navs.lastElementChild.id).parentId == test.find(i => i.Id == id).parentId) {
+                    navs.removeChild(navs.lastChild);
+                }
+            }
+            navs.innerHTML += `<li class="breadcrumb-item active" id="${id}" aria-current="page">${test.find(c => c.Id == id).Name}</li>`;
+            return;
+        }
+        filtered.map(item =>
+        {
+            const temp = document.createElement("option");
+            temp.value = item.Id;
+            temp.innerText=item.Name;
+            list.appendChild(temp);
+        }
+        );
+        var cats = document.getElementById("categories");
+        cats.lastElementChild.setAttribute('disabled', '');
+        var parent = test.find(i => i.Id == id);
+        if (parent.parentId) {
+            list.id = parent.parentId;
+        }
+        else list.id = -1;
+        const check = document.getElementById(`${list.id}`);
+        console.log(check);
+        //alert(list.id);
+        //alert(check);
+        // if (check != null) {
+        if (test.find(i => i.Id == navs.lastElementChild.id)) {
+            alert("test");
+            if (test.find(i => i.Id == navs.lastElementChild.id).parentId == test.find(i => i.Id == id).parentId) {
+                alert("test222222");
+                cats.appendChild(list);
+               // check.innerHTML = list.innerHTML;
+                navs.removeChild(navs.lastChild);
+            }
+        }
+            else {
+                cats.appendChild(list);
+            }
+            //insertAfter(list, l);
+            navs.innerHTML += `<li class="breadcrumb-item active" id="${id}" aria-current="page">${test.find(c => c.Id == id).Name}</li>`;
+        }
+    
+    //function insertAfter(newNode, referenceNode) {
+    //    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+    //}
+
+</script>
 <div class="main-container">
     <div class="pd-ltr-20">
 
-        <form class="form-horizontal" action="~/Category/Create" method="post">
+        <form class="form-horizontal" action="~/SubCategory/Create" method="post" onsubmit="handleSubmit(event)">
             <h4>Add SubCategory</h4>
             <hr />
 
@@ -50,29 +146,46 @@
             <div class="form-group">
                 @*  @Html.LabelFor(model => model.Picture, htmlAttributes: new { @class = "control-label col-md-2" })*@
                 <div class="col-md-10">
-                    @Html.TextBox("file", "", new { type = "file" }) <br />
+                    @*@Html.TextBox("file", "", new { type = "file" }) <br />*@
                     <input type="file" name="ImageData" id="ImageData" />
                     @* @Html.TextBoxFor(model => model.Picture, new { htmlAttributes = new { @class = "form-control" } })*@
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" id="categories">
                 @{
                     List<SelectListItem> listItems = new List<SelectListItem>();
                     foreach (var item in Model.categories)
                     {
-
-                        listItems.Add(new SelectListItem
+                        if (item.parentCategory == null)
                         {
-                            Text = item.Name,
-                            Value = item.Id.ToString()
-                        });
+                            listItems.Add(new SelectListItem
+                            {
+                                Text = item.Name,
+                                Value = item.Id.ToString()
+                            });
+                        }
                     }
 
                 }
-                @Html.DropDownListFor(model => model.ParentId, listItems, "Select Category")
-
+                @*@Html.DropDownListFor(model => model.ParentId, listItems,"Select Category")*@
+                @Html.HiddenFor(model=>model.ParentId, new { htmlAttributes = new { @id="hidden" } })
+                <select id="ParentId" onchange="myfunction(this.value)" name="ParentId">
+                    @foreach (var item in Model.categories)
+                    {
+                        if (item.parentCategory == null)
+                        {
+                            <option value="@item.Id" name="@item.Id">@item.Name</option>
+                        }
+                    }
+                </select>
             </div>
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb" id="navs">
+                    <li class="breadcrumb-item" aria-current="page">Selected Category</li>
+                </ol>
+            </nav>
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
@@ -86,3 +199,4 @@
         </div>
     </div>
 </div>
+

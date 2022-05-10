@@ -1,6 +1,7 @@
 ﻿using Models;
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 #nullable disable
 
@@ -19,8 +20,10 @@ namespace Admin.Models
         public string Picture { get; set; }
 
         public int? parentId { get; set; }
+        [JsonIgnore]
         public virtual Category parentCategory { get; set; }
         public virtual ICollection<Category> subCategories { get; set; }
+        public virtual ICollection<Filters_Categories> Filter_categories { get; set; }
         public virtual ICollection<Product> Products { get; set; }
     }
 }

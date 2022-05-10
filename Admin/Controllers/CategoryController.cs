@@ -1,5 +1,4 @@
-﻿using Admin.Data;
-using Admin.Models;
+﻿using Admin.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repos;
@@ -11,8 +10,6 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using ViewModel;
 using Microsoft.AspNetCore.Hosting;
-//using static System.Net.Mime.MediaTypeNames;
-using static System.Net.WebRequestMethods;
 using SixLabors.ImageSharp;
 
 namespace Admin.Controllers
@@ -52,25 +49,27 @@ namespace Admin.Controllers
 
         // POST: ProductController1/Create
         [HttpPost]
-        //[ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(CategoryViewModel c , IFormFile ImageData)
         {
-            
-           // var filePath = Path.GetTempFileName(); //we are using Temp file name just for the example. Add your own file path.
-            //ImageData.Add(filePath);
-            var path = Path.Combine(Environment.ContentRootPath, "wwwroot/pics");
-            //using (var stream = new FileStream(path, FileMode.Create))
-            //{
-                var e = Image.Load(ImageData.OpenReadStream());
-                e.SaveAsJpeg(path);
-            
-        //        await ImageData.CopyToAsync(stream);
-        //}
-            //Image
-            //var image = ImageData.OpenReadStream();
 
-            try
-            {
+            // var filePath = Path.GetTempFileName(); //we are using Temp file name just for the example. Add your own file path.
+            //ImageData.Add(filePath);
+            //    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/pics");
+            //    //var path = Path.Combine(Environment.ContentRootPath, "wwwroot/pics");
+            //    using (var stream = new FileStream(path, FileMode.Create))
+            //    {
+            //        //    var e = Image.Load(ImageData.OpenReadStream());
+            //        //    e.SaveAsJpeg(path);
+
+            //        ImageData.CopyTo(stream);
+            //}
+            PicsHelper.save(ImageData);
+                //Image
+                //var image = ImageData.OpenReadStream();
+
+                try
+                {
                 ModelRepository.Create(c.ToModel());
                 unitofWork.Save();
                 return RedirectToAction(nameof(Index));

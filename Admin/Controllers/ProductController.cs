@@ -1,7 +1,9 @@
 ﻿using Admin.Data;
 using Admin.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Models.AuthenticationClasses;
 using Repos;
 using System;
 using System.Collections.Generic;
@@ -11,6 +13,7 @@ using ViewModel;
 
 namespace Admin.Controllers
 {
+    [Authorize(Roles = UserRoles.Admin)]
     public class ProductController : Controller
     {
 

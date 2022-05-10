@@ -18,11 +18,13 @@ namespace UserSide.Controllers
         IUnitofWork unitOfWork;
         IModelRepo<Order> orderRepo;
         IModelRepo<Customer> customerRepo;
+        Helper helper;
         public OrderController(IUnitofWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
             orderRepo = unitOfWork.GetOrderRepo();
             customerRepo = unitOfWork.GetCustomerRepo();
+            helper = new Helper(unitOfWork);
         }
         [HttpGet]
         [Authorize(Roles =UserRoles.Customer)]
@@ -56,19 +58,23 @@ namespace UserSide.Controllers
             return Ok(orders.ToList());
         }
         [HttpPost]
+        [Authorize(Roles = UserRoles.Customer)]
         [Route("add")]
-        public IActionResult addOrder(List<OrderProduct> list,string address,int custID,int tPrice)
+        public IActionResult addOrder(List<OrderProduct> list,string address)
         {
+            var userId = User.Claims.FirstOrDefault(c => c.Type == "Id").Value;
+            var custID = customerRepo.Read().Where(c => c.profileID == userId).Select(c => c.Id).FirstOrDefault();
+            response res = helper.checkProducts(list);
+            if (res.errors > 0)
+            {
+                return NotFound(res.message);
+            }
+            var tPrice = helper.getTotalPrice(list);
             Order o = new Order();
             o.OrderAddress = address;
             o.CustomerId = custID;
             o.OrderDate = DateTime.Now;
             o.EstimatedDeliveryDate = DateTime.Now.AddDays(10);
-            int total = 0;
-            //foreach(var prd in list)
-            //{
-
-            //}
             o.TotalPrice = tPrice;
             o.orderproduct = list;
             orderRepo.Create(o);

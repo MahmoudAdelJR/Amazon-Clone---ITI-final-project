@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Models.AuthenticationClasses;
 using Repos;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ using ViewModel;
 
 namespace Admin.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = UserRoles.Admin)]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

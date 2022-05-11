@@ -7520,19 +7520,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LeNoVo\\.nuget\\packages\\": {}
+    "C:\\Users\\Dell\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last one working right now\\MVC and API\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj",
+      "projectUniqueName": "F:\\final project\\Amazon Clone - ITI final project\\Admin\\Admin.csproj",
       "projectName": "Admin",
-      "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last one working right now\\MVC and API\\Amazon-Clone---ITI-final-project\\Admin\\Admin.csproj",
-      "packagesPath": "C:\\Users\\LeNoVo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last one working right now\\MVC and API\\Amazon-Clone---ITI-final-project\\Admin\\obj\\",
+      "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Admin\\Admin.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "F:\\final project\\Amazon Clone - ITI final project\\Admin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LeNoVo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7546,14 +7546,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last one working right now\\MVC and API\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj": {
-              "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last one working right now\\MVC and API\\Amazon-Clone---ITI-final-project\\DataContext\\DataContext.csproj"
+            "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj": {
+              "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\DataContext\\DataContext.csproj"
             },
-            "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last one working right now\\MVC and API\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj": {
-              "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last one working right now\\MVC and API\\Amazon-Clone---ITI-final-project\\Repos\\Repos.csproj"
+            "F:\\final project\\Amazon Clone - ITI final project\\Repos\\Repos.csproj": {
+              "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\Repos\\Repos.csproj"
             },
-            "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last one working right now\\MVC and API\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj": {
-              "projectPath": "C:\\Users\\LeNoVo\\OneDrive\\Desktop\\Last one working right now\\MVC and API\\Amazon-Clone---ITI-final-project\\ViewModel\\ViewModel.csproj"
+            "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\ViewModel.csproj": {
+              "projectPath": "F:\\final project\\Amazon Clone - ITI final project\\ViewModel\\ViewModel.csproj"
             }
           }
         }

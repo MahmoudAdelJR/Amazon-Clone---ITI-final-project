@@ -93,6 +93,9 @@
                         <a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
                         <a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i> Setting</a>
                         <a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
+                        
+                            <a asp-action="Registration" asp-controller="Account">   Add New Account</a>
+                        
                         <form asp-controller="Account" asp-action="LogOut" method="post">
                             <button type="submit" value="Sign Out" style="width: auto; color:gray; background-color: transparent;border:none" class="btn btn-primary"><i class="dw dw-logout"></i> Log Out</button>
                         </form>
@@ -209,7 +212,7 @@
                         </a>
                         <ul class="submenu">
                             <li><a href="~/Customer/Index">Show All Customers</a></li>
-                            <li><a href="~/Customer/Create">Add Customer</a></li>
+                            @*<li><a href="~/Customer/Create">Add Customer</a></li>*@
                         </ul>
                     </li>
                     <li class="dropdown">

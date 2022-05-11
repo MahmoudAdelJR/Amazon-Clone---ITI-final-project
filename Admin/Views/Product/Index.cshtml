@@ -1,11 +1,12 @@
 ﻿
 @model List<Product>
-
+@using Microsoft.Extensions.Configuration;
+@inject IConfiguration configuration;
 <div class="main-container">
     <div class="pd-ltr-20">
 
         <div class="card-box mb-30">
-            <h2 class="h4 pd-20">Best Selling Products</h2>
+            <h2 class="h4 pd-20"> Products</h2>
             <table class="data-table table nowrap">
                 <thead>
                     <tr>
@@ -15,57 +16,58 @@
                         <th>Details</th>
                         <th>Edit</th>
                         <th>Delete</th>
-                        <th class="datatable-nosort">Action</th>
+                        @*<th class="datatable-nosort">Action</th>*@
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
-                    <tr>
-                        <td  style="white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; max-width: 100ch !important; ">@item.Name</td>
-                        <td>@item.Price</td>
-                        <td> <img src="@item.Picture" /> </td>
-                        <td>
-                            @Html.ActionLink("Details", "Details", new { @Id = item.Id })
-                        </td>
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", new
-                       {
-                           @Id = item.Id,
-                           @Name = item.Name,
-                           @Discount = item.Discount,
-                           @Shipping = item.Shipping,
-                           @Price = item.Price,
-                           @Picture = item.Picture,
-                           @Stock = item.Stock,
-                           @Brand = item.Brand,
-                           @Description = item.Description,
-                           @SubCategoryID = item.categoryId,
-                           @SellerId = item.SellerId
-                       })
-                        </td>
-                        <td>
-                            <i class="fa-solid fa-trash-can">
-                                @Html.ActionLink("Delete", "Delete", new { @Id = item.Id })
-                            </i>
-                        </td>
+                        <tr>
+                            <td style="white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; max-width: 100ch !important; ">@item.Name</td>
+                            <td>@item.Price</td>
+                            <td> <img src="@configuration["URL"]@item.Picture" /> </td>
+                            <td>
+                                @Html.ActionLink("Details", "Details", new { @Id = item.Id })
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new
+                           {
+                               @Id = item.Id,
+                               @Name = item.Name,
+                               @Discount = item.Discount,
+                               @Shipping = item.Shipping,
+                               @Price = item.Price,
+                               @Picture = item.Picture,
+                               @Stock = item.Stock,
+                               @Brand = item.Brand,
+                               @Description = item.Description,
+                               @SubCategoryID = item.categoryId,
+                               @SellerId = item.SellerId
+                           })
+                            </td>
+                            <td>
+                                <i class="fa-solid fa-trash-can">
+                                    @Html.ActionLink("Delete", "Delete", new { @Id = item.Id })
+                                </i>
+                            </td>
 
-                        <td>
-                            <div class="dropdown">
-                                <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-                                    <i class="dw dw-more"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                            @*<td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                            <i class="dw dw-more"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 
-                                    @Html.ActionLink("Create", "Create", null, new { @class = "dropdown-item" })
-                                    <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
-                                    <a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
+                                            @Html.ActionLink("Create", "Create", null, new { @class = "dropdown-item" })
+                                            <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
+                                            <a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
 
-                                    <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>}
+                                            <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+                                        </div>
+                                    </div>
+                                </td>*@
+                        </tr>
+}
                 </tbody>
             </table>
         </div>

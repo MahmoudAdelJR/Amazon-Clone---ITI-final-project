@@ -25,14 +25,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model.OrderByDescending(o=>o.status))
+                    @foreach (var item in Model)
                     {
                     <tr>
                         <td>@item.Id</td>
                         <td>@item.OrderAddress</td>
-                        <td>@item.OrderDate</td>
+                        <td>@item.OrderDate.Value.ToShortDateString()</td>
                         <td>@item.CustomerId</td>
-                        <td>@item.EstimatedDeliveryDate</td>
+                        <td>@item.EstimatedDeliveryDate.Value.ToShortDateString()</td>
                         <td>
                             @Html.ActionLink("Details", "Details", new { @Id = item.Id })
                         </td>

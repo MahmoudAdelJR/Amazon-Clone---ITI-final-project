@@ -64,7 +64,7 @@ namespace Admin.Controllers
 
             //        ImageData.CopyTo(stream);
             //}
-            PicsHelper.save(ImageData);
+           // PicsHelper.save(ImageData);
                 //Image
                 //var image = ImageData.OpenReadStream();
 

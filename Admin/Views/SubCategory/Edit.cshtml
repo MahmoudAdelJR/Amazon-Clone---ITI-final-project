@@ -33,25 +33,36 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.Picture, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.Picture, new { htmlAttributes = new { @class = "form-control" } })
-                </div>
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.Picture, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Picture, new { htmlAttributes = new { @class = "form-control" } })
             </div>
+        </div>*@
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.parentId, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.parentId, new { htmlAttributes = new { @class = "form-control" } })
-                </div>
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.parentId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.parentId, new { htmlAttributes = new { @class = "form-control" } })
             </div>
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Edit" class="btn btn-primary" />
+        </div>*@
+            @*<div class="form-group">
+                @Html.HiddenFor(model => model.ParentId, new { htmlAttributes = new { @id = "hidden" } })
+                <select id="ParentId" onchange="myfunction(this.value)" name="ParentId">
+                    @foreach (var item in Model.categories)
+                    {
+                        if (item.parentCategory == null)
+                        {
+                            <option value="@item.Id" name="@item.Id">@item.Name</option>
+                        }
+                    }
+                </select>
+                </div>*@
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Edit" class="btn btn-primary" />
+                    </div>
                 </div>
-            </div>
         </form>
 
         <div class="footer-wrap pd-20 mb-20 card-box">

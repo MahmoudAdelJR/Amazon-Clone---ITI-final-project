@@ -1,9 +1,12 @@
 ﻿@using Microsoft.AspNetCore.Identity;
 @using ViewModel
 @model HomeViewModel
+@using Microsoft.Extensions.Configuration;
+@inject IConfiguration configuration;
 @inject SignInManager<IdentityUser> signInManager
 @{
     ViewData["Title"] = "Home Page";
+    
 }
 <div class="main-container">
     <div class="pd-ltr-20">
@@ -34,7 +37,7 @@
                         </div>
                         <div class="widget-data d-flex">
                             <div class="h4 mb-0 me-2">@Model.CustomersCount</div>
-                            <div class="weight-600 font-14">Customer</div>
+                            @*<div class="weight-600 font-14">Customer</div>*@
                         </div>
                     </div>
                 </div>
@@ -47,7 +50,7 @@
                         </div>
                         <div class="widget-data d-flex">
                             <div class="h4 mb-0 me-2">@Model.CategoriesCount</div>
-                            <div class="weight-600 font-14">Category</div>
+                            @*<div class="weight-600 font-14">Category</div>*@
                         </div>
                     </div>
                 </div>
@@ -60,7 +63,7 @@
                         </div>
                         <div class="widget-data d-flex">
                             <div class="h4 mb-0 me-2">@Model.ProductsCount</div>
-                            <div class="weight-600 font-14">Product</div>
+                            @*<div class="weight-600 font-14">Product</div>*@
                         </div>
                     </div>
                 </div>
@@ -73,7 +76,7 @@
                         </div>
                         <div class="widget-data d-flex">
                             <div class="h4 mb-0 me-2">@Model.SellersCount</div>
-                            <div class="weight-600 font-14">Seller</div>
+                            @*<div class="weight-600 font-14">Seller</div>*@
                         </div>
                     </div>
                 </div>
@@ -81,7 +84,7 @@
         </div>
 
         <div class="card-box mb-30">
-            <h2 class="h4 pd-20">Best Selling Products</h2>
+            <h2 class="h4 pd-20"> Products</h2>
             <table class="data-table table nowrap">
                 <thead>
                     <tr>
@@ -90,7 +93,7 @@
                         <th>Brand</th>
                         <th>Size</th>
                         <th>Price</th>
-                        <th>Quantityty</th>
+                        <th>Quantity</th>
                         <th class="datatable-nosort">Action</th>
                     </tr>
                 </thead>
@@ -99,7 +102,7 @@
                     {
                         <tr>
                             <td class="table-plus">
-                                <img src="@item.Picture" width="70" height="70" alt="">
+                                <img src="@configuration["URL"]@item.Picture" width="70" height="70" alt="">
                             </td>
                             <td>
                                 <h5 class="font-16">@item.Name</h5>

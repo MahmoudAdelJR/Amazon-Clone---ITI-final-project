@@ -1,20 +1,8 @@
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\Repos.deps.json
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\Repos.dll
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\ref\Repos.dll
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\Repos.pdb
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\DataContext.dll
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\Models.dll
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\DataContext.pdb
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\Models.pdb
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.csproj.AssemblyReference.cache
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.AssemblyInfoInputs.cache
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.AssemblyInfo.cs
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.csproj.CoreCompileInputs.cache
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.csproj.CopyComplete
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.dll
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\ref\Repos.dll
-C:\Users\LeNoVo\OneDrive\Desktop\Last Github project\Last one\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.pdb
+F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.csproj.AssemblyReference.cache
+F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.GeneratedMSBuildEditorConfig.editorconfig
+F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.AssemblyInfoInputs.cache
+F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.AssemblyInfo.cs
+F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.csproj.CoreCompileInputs.cache
 F:\final project\Amazon Clone - ITI final project\Repos\bin\Debug\net5.0\Repos.deps.json
 F:\final project\Amazon Clone - ITI final project\Repos\bin\Debug\net5.0\Repos.dll
 F:\final project\Amazon Clone - ITI final project\Repos\bin\Debug\net5.0\ref\Repos.dll
@@ -23,33 +11,7 @@ F:\final project\Amazon Clone - ITI final project\Repos\bin\Debug\net5.0\DataCon
 F:\final project\Amazon Clone - ITI final project\Repos\bin\Debug\net5.0\Models.dll
 F:\final project\Amazon Clone - ITI final project\Repos\bin\Debug\net5.0\DataContext.pdb
 F:\final project\Amazon Clone - ITI final project\Repos\bin\Debug\net5.0\Models.pdb
-F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.csproj.AssemblyReference.cache
-F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.GeneratedMSBuildEditorConfig.editorconfig
-F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.AssemblyInfoInputs.cache
-F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.AssemblyInfo.cs
-F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.csproj.CoreCompileInputs.cache
 F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.csproj.CopyComplete
 F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.dll
 F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\ref\Repos.dll
 F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\Repos.pdb
-<<<<<<< HEAD
-=======
-F:\final project\Amazon Clone - ITI final project\Repos\obj\Debug\net5.0\refint\Repos.dll
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\Repos.deps.json
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\Repos.dll
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\ref\Repos.dll
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\Repos.pdb
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\DataContext.dll
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\Models.dll
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\DataContext.pdb
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\bin\Debug\net5.0\Models.pdb
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.csproj.AssemblyReference.cache
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.AssemblyInfoInputs.cache
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.AssemblyInfo.cs
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.csproj.CoreCompileInputs.cache
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.csproj.CopyComplete
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.dll
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\ref\Repos.dll
-C:\Users\LeNoVo\OneDrive\Desktop\Last one working right now\MVC and API\Amazon-Clone---ITI-final-project\Repos\obj\Debug\net5.0\Repos.pdb
->>>>>>> e5edb51e269cbd5b4e08840dbec6ca54c9dd03f2

@@ -7,7 +7,7 @@
     <div class="pd-ltr-20">
 
         <form class="form-horizontal" action="~/Category/Create" method="post" enctype=multipart/form-data>
-            <h4>Add SubCategory</h4>
+            <h4>Add Category</h4>
             <hr />
 
             <div class="form-group">
@@ -40,21 +40,21 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            @*<div class="form-group">
                 @Html.LabelFor(model => model.Picture, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.TextBoxFor(model => model.Picture, new { htmlAttributes = new { @class = "form-control" } })
                 </div>
-            </div>
+            </div>*@
 
-            <div class="form-group">
+            <!--<div class="form-group">-->
                 @*  @Html.LabelFor(model => model.Picture, htmlAttributes: new { @class = "control-label col-md-2" })*@
-                <div class="col-md-10">
-                    @Html.TextBox("file", "", new { type = "file" }) <br />
-                    <input type="file" name="ImageData" id="ImageData" />
+                <!--<div class="col-md-10">
+                   <br />
+                    <input type="file" name="ImageData" id="ImageData" />-->
                     @* @Html.TextBoxFor(model => model.Picture, new { htmlAttributes = new { @class = "form-control" } })*@
-                </div>
-            </div>
+                <!--</div>
+            </div>-->
 
             @*<div class="form-group">
                 @{

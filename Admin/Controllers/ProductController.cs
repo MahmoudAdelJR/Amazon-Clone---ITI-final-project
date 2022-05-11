@@ -78,15 +78,17 @@ namespace Admin.Controllers
         // POST: ProductController1/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Editing(Product p)
+        public ActionResult Editing(ProductVM p,int Id)
         {
             try
             {
-                ModelRepository.Update(p);
+                Product prd = p.ToModel();
+                prd.Id = Id;
+                ModelRepository.Update(prd);
                 unitofWork.Save();
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception e)
             {
                 return View();
             }

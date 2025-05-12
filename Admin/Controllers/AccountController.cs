@@ -94,7 +94,99 @@ namespace WebApplication7.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = UserRoles.Admin)]
+        [HttpPost]
+        public async Task<IActionResult> Registration(RegistrationVM model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
 
+            var user = new IdentityUser
+            {
+                UserName = model.Email,
+                Email = model.Email
+            };
+
+            var result = await userManager.CreateAsync(user, model.Password);
+
+            if (!result.Succeeded)
+            {
+                AddErrorsToModelState(result.Errors);
+                return View(model);
+            }
+
+            if (!await EnsureAdminRoleExists())
+            {
+                await userManager.DeleteAsync(user);
+                ModelState.AddModelError("", "Failed to create admin role.");
+                return View(model);
+            }
+
+            if (!await AssignUserToAdminRole(user))
+            {
+                await userManager.DeleteAsync(user);
+                ModelState.AddModelError("", "Failed to assign user to admin role.");
+                return View(model);
+            }
+
+            if (!await CreateAdminProfile(user, model))
+            {
+                await userManager.DeleteAsync(user);
+                return View(model);
+            }
+
+            return RedirectToAction("Login");
+        }
+
+        private async Task<bool> EnsureAdminRoleExists()
+        {
+            if (!await roleManager.RoleExistsAsync(UserRoles.Admin))
+            {
+                var roleResult = await roleManager.CreateAsync(new IdentityRole(UserRoles.Admin));
+                return roleResult.Succeeded;
+            }
+            return true;
+        }
+
+        private async Task<bool> AssignUserToAdminRole(IdentityUser user)
+        {
+            if (await roleManager.RoleExistsAsync(UserRoles.Admin))
+            {
+                var roleResult = await userManager.AddToRoleAsync(user, UserRoles.Admin);
+                return roleResult.Succeeded;
+            }
+            return false;
+        }
+
+        private async Task<bool> CreateAdminProfile(IdentityUser user, RegistrationVM model)
+        {
+            try
+            {
+                ModelRepository.Create(new Admins
+                {
+                    profileID = user.Id,
+                    Name = model.Email,
+                    Email = model.Email,
+                });
+                unitofWork.Save();
+                return true;
+            }
+            catch (Exception e)
+            {
+                ModelState.AddModelError("", e.Message);
+                return false;
+            }
+        }
+
+        private void AddErrorsToModelState(IEnumerable<IdentityError> errors)
+        {
+            foreach (var error in errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
+        }
 
 
         public IActionResult Login()
